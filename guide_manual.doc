@@ -1,0 +1,1338 @@
+# SentinelLite
+
+## Mini SIEM + SOAR Cybersecurity Platform
+
+**Project Type:** Cybersecurity + DevOps/CloudOps
+**Primary Language:** Python
+**Target Environment:** Linux
+**Project Level:** Mini/Academic Project
+**Architecture:** Modular SIEM + SOAR with containerized and cloud-ready deployment
+
+---
+
+# 1. Project Overview
+
+SentinelLite is a lightweight Security Information and Event Management (SIEM) and Security Orchestration, Automation and Response (SOAR) platform.
+
+The system collects security logs, converts them into structured events, detects suspicious activities using configurable rules, generates alerts, manages incidents, and executes automated response playbooks.
+
+The project will also incorporate practical DevOps and CloudOps practices such as Git-based development, containerization, CI/CD, Linux administration, cloud deployment, networking, monitoring, and infrastructure automation.
+
+### Core workflow
+
+```text
+Log Sources
+    ↓
+Log Collector
+    ↓
+Parser & Normalizer
+    ↓
+Event Database
+    ↓
+SIEM Detection Engine
+    ↓
+Alert Manager
+    ↓
+Incident Management
+    ↓
+SOAR Playbook Engine
+    ↓
+Response Actions
+    ↓
+Audit & Monitoring
+```
+
+---
+
+# 2. Project Objectives
+
+The project aims to:
+
+* Collect security logs from Linux systems.
+* Normalize different log formats into a common event structure.
+* Detect suspicious activities using rule-based detection.
+* Generate and prioritize security alerts.
+* Correlate related events.
+* Provide a web-based security dashboard.
+* Manage incidents through their complete lifecycle.
+* Automate selected incident-response actions.
+* Maintain an audit trail of security activities.
+* Containerize the application.
+* Implement CI/CD.
+* Deploy the platform on a cloud VM.
+* Monitor application and infrastructure health.
+
+---
+
+# 3. Technology Stack
+
+## Core Development
+
+| Technology          | Purpose                                  |
+| ------------------- | ---------------------------------------- |
+| Python              | Main application and automation language |
+| Flask               | Web backend/API                          |
+| HTML/CSS/JavaScript | Dashboard                                |
+| SQLite              | Initial database                         |
+| PostgreSQL          | Optional production database             |
+| JSON/JSONL          | Event interchange                        |
+| YAML                | Detection rules/playbooks                |
+
+## Security
+
+| Technology                | Purpose                      |
+| ------------------------- | ---------------------------- |
+| Linux authentication logs | Security event source        |
+| Python rule engine        | Threat detection             |
+| Threat Intelligence APIs  | Indicator enrichment         |
+| UFW/nftables              | Controlled firewall response |
+| Audit logging             | Response tracking            |
+
+## DevOps / CloudOps
+
+| Technology             | Purpose                               |
+| ---------------------- | ------------------------------------- |
+| Git                    | Version control                       |
+| GitHub                 | Repository                            |
+| Docker                 | Application containerization          |
+| Docker Compose         | Multi-container management            |
+| Jenkins/GitHub Actions | CI/CD                                 |
+| AWS EC2/Azure VM       | Cloud deployment                      |
+| Linux                  | Server administration                 |
+| SSH                    | Remote server management              |
+| Cloud Security Groups  | Network security                      |
+| Monitoring tools       | Infrastructure/application monitoring |
+
+---
+
+# 4. Development Phases
+
+The complete project is divided into the following phases:
+
+```text
+Phase 0  → Planning & Environment
+Phase 1  → Log Collection
+Phase 2  → Parsing & Normalization
+Phase 3  → Database & Event Storage
+Phase 4  → SIEM Detection Engine
+Phase 5  → Alert & Incident Management
+Phase 6  → Web Dashboard
+Phase 7  → SOAR Playbook Engine
+Phase 8  → Automated Response & Integrations
+Phase 9  → Threat Intelligence & Correlation
+Phase 10 → Docker & Containerization
+Phase 11 → CI/CD Pipeline
+Phase 12 → Cloud Deployment
+Phase 13 → Monitoring & Operations
+Phase 14 → Security Hardening, Testing & Documentation
+```
+
+---
+
+# 5. Phase 0 — Planning & Environment Setup
+
+## Objective
+
+Prepare the development environment and establish the project's architecture.
+
+## Tools
+
+* Linux Mint/Ubuntu
+* Python 3
+* VS Code
+* Git
+* GitHub
+* VirtualBox/VMware
+* Docker — introduced later
+
+## Tasks
+
+1. Install Python.
+2. Install Git.
+3. Create GitHub repository.
+4. Create project directory.
+5. Establish directory structure.
+6. Create Python virtual environment.
+7. Document project requirements.
+
+## Initial setup
+
+```bash
+mkdir -p ~/sentinellite
+cd ~/sentinellite
+
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Initialize Git:
+
+```bash
+git init
+```
+
+Create `.gitignore`:
+
+```text
+venv/
+__pycache__/
+*.pyc
+.env
+data/*.db
+data/*.jsonl
+```
+
+## Deliverables
+
+* Development environment
+* Git repository
+* Initial architecture
+* Project README
+* `.gitignore`
+
+---
+
+# 6. Phase 1 — Log Collection
+
+## Objective
+
+Create the first SIEM component: a reliable log collector.
+
+## Tools
+
+* Python
+* Linux
+* `pathlib`
+* `json`
+* `logging`
+* `datetime`
+* JSONL
+
+## Initial log source
+
+Ubuntu/Linux authentication logs:
+
+```text
+/var/log/auth.log
+```
+
+For development, use:
+
+```text
+logs/sample_auth.log
+```
+
+## Responsibilities
+
+The collector must:
+
+* Read logs.
+* Detect new entries.
+* Preserve raw logs.
+* Add collection timestamps.
+* Track its reading position.
+* Avoid duplicate ingestion.
+* Handle missing files.
+* Eventually support real-time monitoring.
+
+## Event format
+
+```json
+{
+    "event_id": null,
+    "collected_at": "2026-09-17T16:30:00",
+    "source": "linux_auth",
+    "raw_log": "Original log entry"
+}
+```
+
+## Current status
+
+**Phase 1 has already been started.**
+
+The basic collector and persistent-position mechanism have been implemented.
+
+## Remaining Phase 1 work
+
+* Real-time monitoring
+* Graceful shutdown
+* Log rotation handling
+* Testing
+* Git commit
+
+---
+
+# 7. Phase 2 — Log Parsing & Normalization
+
+## Objective
+
+Convert raw log messages into structured security events.
+
+## Tools
+
+* Python
+* Regular expressions
+* `datetime`
+* JSON
+* Pytest
+
+## Example
+
+Raw log:
+
+```text
+Sep 17 16:30:01 ubuntu sshd[1234]:
+Failed password for admin from 192.168.1.50 port 22 ssh2
+```
+
+Normalized event:
+
+```json
+{
+    "event_id": "evt-0001",
+    "timestamp": "2026-09-17T16:30:01",
+    "source": "linux_auth",
+    "event_type": "authentication",
+    "username": "admin",
+    "source_ip": "192.168.1.50",
+    "status": "failure",
+    "raw_log": "..."
+}
+```
+
+## Fields
+
+The parser should extract:
+
+* Timestamp
+* Host
+* Process
+* Event type
+* Username
+* Source IP
+* Port
+* Status
+* Raw message
+
+## Event types
+
+Initially:
+
+```text
+failed_login
+successful_login
+sudo_activity
+invalid_user
+```
+
+Later:
+
+```text
+port_scan
+process_activity
+file_activity
+network_activity
+```
+
+## Deliverables
+
+* Parser
+* Normalization module
+* Event schema
+* Unit tests
+
+---
+
+# 8. Phase 3 — Database & Event Storage
+
+## Objective
+
+Move from temporary JSONL storage to persistent event storage.
+
+## Tools
+
+* SQLite
+* Python `sqlite3`
+* SQL
+* DB Browser for SQLite
+
+## Main tables
+
+### events
+
+```text
+id
+event_id
+timestamp
+source
+event_type
+username
+source_ip
+status
+raw_log
+created_at
+```
+
+### ingestion_state
+
+```text
+id
+source_name
+last_position
+last_event_hash
+updated_at
+```
+
+## Future tables
+
+```text
+alerts
+incidents
+incident_alerts
+response_actions
+playbook_executions
+indicators
+audit_logs
+```
+
+## Deliverables
+
+* Database schema
+* Database initialization
+* CRUD functions
+* Event storage
+* Database indexes
+
+---
+
+# 9. Phase 4 — SIEM Detection Engine
+
+## Objective
+
+Detect suspicious behavior from normalized events.
+
+This is the main SIEM intelligence layer.
+
+## Tools
+
+* Python
+* SQLite
+* YAML/JSON
+* Pytest
+
+## Detection architecture
+
+```text
+Normalized Events
+       ↓
+Detection Engine
+       ↓
+Rules
+       ↓
+Correlation
+       ↓
+Alert
+```
+
+## Initial rules
+
+### AUTH-001 — SSH brute force
+
+```text
+5+ failed login attempts
+from same IP
+within 60 seconds
+```
+
+Generate:
+
+```text
+Severity: HIGH
+```
+
+### AUTH-002 — Suspicious successful login
+
+```text
+Multiple failed logins
+       +
+Successful login
+       ↓
+Suspicious authentication
+```
+
+### AUTH-003 — Privilege escalation
+
+Detect suspicious privilege escalation activity.
+
+### NET-001 — Excessive connection attempts
+
+Detect unusually high connection activity.
+
+## Rule structure
+
+```yaml
+id: AUTH-001
+
+name: SSH Brute Force
+
+event_type: failed_login
+
+threshold: 5
+
+time_window: 60
+
+severity: HIGH
+```
+
+## Deliverables
+
+* Detection engine
+* Rule engine
+* Rule configuration
+* Severity calculation
+* Detection tests
+
+---
+
+# 10. Phase 5 — Alert & Incident Management
+
+## Objective
+
+Turn SIEM detections into manageable security incidents.
+
+## Tools
+
+* Python
+* SQLite
+* Flask API
+
+## Alert lifecycle
+
+```text
+NEW
+ ↓
+INVESTIGATING
+ ↓
+ ├── FALSE_POSITIVE
+ │
+ └── RESOLVED
+```
+
+## Alert fields
+
+```text
+alert_id
+rule_id
+title
+description
+severity
+source_ip
+status
+created_at
+updated_at
+```
+
+## Incident fields
+
+```text
+incident_id
+title
+severity
+status
+assigned_to
+created_at
+resolved_at
+```
+
+## Features
+
+* Alert creation
+* Alert filtering
+* Incident creation
+* Status changes
+* Investigation notes
+* Alert-to-incident correlation
+
+---
+
+# 11. Phase 6 — Web Dashboard
+
+## Objective
+
+Create a SOC-style interface for monitoring security events.
+
+## Tools
+
+* Flask
+* HTML
+* CSS
+* JavaScript
+* Jinja2
+* Chart.js
+* Bootstrap — optional
+
+## Dashboard components
+
+```text
+┌──────────────────────────────────────┐
+│          SENTINELLITE SOC            │
+├──────────────────────────────────────┤
+│ Events │ Alerts │ High │ Incidents   │
+├──────────────────────────────────────┤
+│ Recent Security Alerts               │
+│                                      │
+│ HIGH     SSH Brute Force             │
+│ MEDIUM   Suspicious Login             │
+│ LOW      Failed Authentication        │
+├──────────────────────────────────────┤
+│ Alert Trends                         │
+│              [Chart]                 │
+└──────────────────────────────────────┘
+```
+
+## Pages
+
+```text
+/
+├── Dashboard
+├── Alerts
+├── Alert Details
+├── Incidents
+├── Incident Details
+├── Events
+└── Settings
+```
+
+## Deliverables
+
+* SOC dashboard
+* Alert page
+* Incident page
+* Event viewer
+* Statistics
+* Filtering
+
+---
+
+# 12. Phase 7 — SOAR Playbook Engine
+
+## Objective
+
+Automate security response.
+
+## Tools
+
+* Python
+* YAML
+* SQLite
+* Flask
+
+## Architecture
+
+```text
+SIEM Alert
+    ↓
+SOAR Trigger
+    ↓
+Playbook
+    ↓
+Action 1
+    ↓
+Action 2
+    ↓
+Action 3
+    ↓
+Audit Log
+```
+
+## Example playbook
+
+```yaml
+name: SSH Brute Force Response
+
+trigger:
+  rule_id: AUTH-001
+  severity: HIGH
+
+actions:
+
+  - type: create_incident
+
+  - type: record_indicator
+
+  - type: simulated_block
+
+  - type: notify_analyst
+```
+
+## Initial SOAR actions
+
+```text
+create_incident
+record_indicator
+notify_analyst
+simulated_block
+request_approval
+```
+
+## Important
+
+Disruptive actions will initially be simulated.
+
+Real firewall actions will only be tested inside a controlled environment.
+
+---
+
+# 13. Phase 8 — Automated Response & Integrations
+
+## Objective
+
+Connect the SOAR engine to operational security tools.
+
+## Tools
+
+* Python
+* UFW/nftables
+* SMTP
+* Telegram API — optional
+* Flask approval interface
+* SQLite
+
+## Response workflow
+
+```text
+Alert
+ ↓
+SOAR
+ ↓
+Threat verification
+ ↓
+Approval if required
+ ↓
+Response
+ ↓
+Audit
+```
+
+## Possible responses
+
+### Safe
+
+* Create incident
+* Notify analyst
+* Add indicator
+* Increase alert priority
+* Record action
+
+### Controlled
+
+* Block test IP
+* Disable test account
+* Terminate test process
+
+## Security controls
+
+* Allowlist trusted IPs.
+* Require approval for disruptive actions.
+* Maintain rollback procedures.
+* Log every action.
+* Never execute arbitrary commands from alert input.
+
+---
+
+# 14. Phase 9 — Threat Intelligence & Event Correlation
+
+## Objective
+
+Add additional context to security alerts.
+
+## Tools
+
+* Python
+* REST APIs
+* SQLite
+* AbuseIPDB — optional
+* VirusTotal — optional
+
+## Example
+
+```text
+Failed Login
+     +
+Known Malicious IP
+     +
+Successful Login
+     ↓
+Highly Suspicious Incident
+```
+
+## Features
+
+* IP reputation
+* Indicator storage
+* Alert enrichment
+* Event correlation
+* Duplicate alert suppression
+* Historical behavior analysis
+
+## Indicator database
+
+```text
+indicator
+indicator_type
+source
+reputation
+first_seen
+last_seen
+confidence
+```
+
+---
+
+# 15. Phase 10 — Docker & Containerization
+
+## Objective
+
+Package the application so that it can be deployed consistently.
+
+## Tools
+
+* Docker
+* Docker Compose
+* Docker Hub — optional
+
+## Initial architecture
+
+```text
+Docker Compose
+      │
+      ├── SIEM API
+      │
+      ├── SOAR Engine
+      │
+      ├── Database
+      │
+      └── Dashboard
+```
+
+## Example structure
+
+```text
+Dockerfile
+docker-compose.yml
+.dockerignore
+```
+
+## Benefits
+
+* Reproducible deployment
+* Environment isolation
+* Easier development
+* Easier cloud deployment
+* Easier scaling
+
+---
+
+# 16. Phase 11 — CI/CD
+
+## Objective
+
+Automatically test and deploy new versions.
+
+## Tools
+
+Choose one initially:
+
+* GitHub Actions
+* Jenkins
+
+For this project, GitHub Actions can be used first, with Jenkins as an optional extension.
+
+## Pipeline
+
+```text
+Developer
+   ↓
+Git Commit
+   ↓
+GitHub
+   ↓
+CI Pipeline
+   ↓
+Run Tests
+   ↓
+Build Docker Image
+   ↓
+Security Checks
+   ↓
+Deploy
+```
+
+## Pipeline stages
+
+```text
+Checkout
+   ↓
+Install Dependencies
+   ↓
+Lint
+   ↓
+Unit Tests
+   ↓
+Build
+   ↓
+Docker Build
+   ↓
+Deploy
+```
+
+## Deliverables
+
+* CI workflow
+* Automated tests
+* Docker build
+* Deployment workflow
+
+---
+
+# 17. Phase 12 — Cloud Deployment
+
+## Objective
+
+Deploy SentinelLite on a cloud environment.
+
+## Recommended platform
+
+**AWS**
+
+### Tools/services
+
+* EC2
+* IAM
+* VPC
+* Security Groups
+* SSH
+* CloudWatch
+* Docker
+
+## Architecture
+
+```text
+                    Internet
+                       │
+                       ▼
+                AWS Security Group
+                       │
+                       ▼
+                  EC2 Instance
+                       │
+                 ┌─────┴─────┐
+                 │   Docker  │
+                 │           │
+                 │ SentinelLite│
+                 └─────┬─────┘
+                       │
+                       ▼
+                  Database
+```
+
+## Cloud tasks
+
+* Create EC2 instance.
+* Configure IAM.
+* Configure security groups.
+* Install Docker.
+* Deploy containers.
+* Configure environment variables.
+* Configure backups.
+* Enable monitoring.
+
+---
+
+# 18. Phase 13 — Monitoring & CloudOps
+
+## Objective
+
+Monitor the health of both the application and infrastructure.
+
+## Monitor
+
+### Application
+
+* API availability
+* Request errors
+* Response time
+* Collector status
+* Detection-engine status
+* SOAR execution failures
+
+### Server
+
+* CPU
+* Memory
+* Disk
+* Network
+* Docker containers
+
+## Tools
+
+Possible options:
+
+* CloudWatch
+* Prometheus
+* Grafana
+* Docker statistics
+* Linux monitoring tools
+
+## Example
+
+```text
+Infrastructure
+      ↓
+Metrics
+      ↓
+Monitoring
+      ↓
+Dashboard
+      ↓
+Operational Alert
+```
+
+This phase gives the project a stronger **CloudOps/operations component**.
+
+---
+
+# 19. Phase 14 — Security Hardening, Testing & Documentation
+
+## Objective
+
+Prepare the project for final demonstration and evaluation.
+
+## Testing
+
+### Unit testing
+
+Test:
+
+* Log parser
+* Detection rules
+* Database functions
+* Playbooks
+
+### Integration testing
+
+Test:
+
+```text
+Log
+ ↓
+Collector
+ ↓
+Parser
+ ↓
+Database
+ ↓
+Detection
+ ↓
+Alert
+ ↓
+SOAR
+ ↓
+Response
+```
+
+### Security testing
+
+Test:
+
+* Authentication
+* Authorization
+* Input validation
+* API security
+* Secrets management
+* Database access
+* Container configuration
+
+## Tools
+
+* Pytest
+* Docker
+* Git
+* OWASP testing principles
+* Linux security tools
+
+---
+
+# 20. Final Project Architecture
+
+After completing all phases:
+
+```text
+                       LOG SOURCES
+                            │
+              ┌─────────────┼─────────────┐
+              │             │             │
+           Linux         Application    Network
+            Logs            Logs         Events
+              │             │             │
+              └─────────────┼─────────────┘
+                            ▼
+                     LOG COLLECTOR
+                            │
+                            ▼
+                  PARSER & NORMALIZER
+                            │
+                            ▼
+                     EVENT STORAGE
+                            │
+                            ▼
+                  SIEM DETECTION ENGINE
+                            │
+                 ┌──────────┴──────────┐
+                 ▼                     ▼
+            Alert Manager        Correlation
+                 │                     │
+                 └──────────┬──────────┘
+                            ▼
+                    INCIDENT MANAGER
+                            │
+                            ▼
+                     SOAR ENGINE
+                            │
+                     ┌──────┴──────┐
+                     ▼             ▼
+                 Playbooks     Approvals
+                     │             │
+                     └──────┬──────┘
+                            ▼
+                    RESPONSE ACTIONS
+                            │
+                            ▼
+                       AUDIT LOGS
+
+
+             ┌─────────────────────────────┐
+             │       DEVOPS / CLOUDOPS     │
+             │                             │
+             │ Git → CI/CD → Docker       │
+             │             ↓               │
+             │          Cloud VM            │
+             │             ↓               │
+             │     Monitoring / Logging    │
+             └─────────────────────────────┘
+```
+
+---
+
+# 21. Final Repository Structure
+
+The completed repository should approximately look like:
+
+```text
+sentinellite/
+│
+├── collector/
+│   ├── __init__.py
+│   ├── log_collector.py
+│   └── monitor.py
+│
+├── parser/
+│   ├── __init__.py
+│   ├── auth_parser.py
+│   └── normalizer.py
+│
+├── siem/
+│   ├── __init__.py
+│   ├── detection_engine.py
+│   ├── correlation.py
+│   └── rules/
+│       ├── auth_rules.yaml
+│       └── network_rules.yaml
+│
+├── soar/
+│   ├── __init__.py
+│   ├── playbook_engine.py
+│   ├── actions.py
+│   └── playbooks/
+│
+├── database/
+│   ├── database.py
+│   └── schema.sql
+│
+├── dashboard/
+│   ├── app.py
+│   ├── templates/
+│   └── static/
+│
+├── threat_intel/
+│   └── enrichment.py
+│
+├── tests/
+│   ├── test_collector.py
+│   ├── test_parser.py
+│   ├── test_detection.py
+│   └── test_soar.py
+│
+├── logs/
+│
+├── data/
+│
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── Jenkinsfile
+├── README.md
+└── LICENSE
+```
+
+---
+
+# 22. Final Demonstration Scenario
+
+The final project should demonstrate a complete attack-to-response workflow.
+
+### Step 1 — Generate test events
+
+Simulate several failed SSH login attempts.
+
+```text
+Failed login
+Failed login
+Failed login
+Failed login
+Failed login
+```
+
+### Step 2 — Collector
+
+```text
+Linux Log
+    ↓
+Collector
+```
+
+### Step 3 — Parser
+
+```text
+Raw Log
+    ↓
+Structured Event
+```
+
+### Step 4 — SIEM
+
+The detection engine identifies:
+
+```text
+AUTH-001
+Possible SSH Brute Force
+Severity: HIGH
+```
+
+### Step 5 — Alert
+
+The dashboard displays:
+
+```text
+HIGH
+SSH Brute Force
+Source: 192.168.1.50
+Status: NEW
+```
+
+### Step 6 — SOAR
+
+The corresponding playbook is triggered.
+
+```text
+Create Incident
+      ↓
+Record IP
+      ↓
+Threat Intelligence Check
+      ↓
+Request Approval
+```
+
+### Step 7 — Response
+
+After approval:
+
+```text
+Simulated IP Block
+      ↓
+Notification
+      ↓
+Audit Log
+```
+
+### Step 8 — Dashboard
+
+The analyst sees:
+
+```text
+Incident: INC-001
+Status: RESOLVED
+Response: IP Blocked
+Playbook: SSH Brute Force Response
+```
+
+This gives us a complete end-to-end demonstration.
+
+---
+
+# 23. Resume-Relevant Skills
+
+By completing the project, the practical skills demonstrated will include:
+
+### Cybersecurity
+
+* SIEM
+* SOAR
+* Log analysis
+* Threat detection
+* Incident response
+* Security automation
+* Threat intelligence
+* Audit logging
+
+### DevOps
+
+* Linux administration
+* Git/GitHub
+* Docker
+* Docker Compose
+* CI/CD
+* Python automation
+* Application deployment
+
+### CloudOps
+
+* Cloud VM deployment
+* IAM
+* Network/security-group configuration
+* Infrastructure monitoring
+* Container operations
+* Application operations
+* Cloud logging
+
+---
+
+# 24. Development Rule
+
+We will follow one important rule throughout the project:
+
+> **Do not add a technology merely to put it on the resume. Implement it and use it in the project.**
+
+For example, if Docker is listed, the application will actually run in Docker.
+
+If CI/CD is listed, the repository will actually have an automated pipeline.
+
+If AWS is listed, the application will actually be deployed to an AWS environment.
+
+This keeps the project technically credible and gives you something concrete to explain during interviews.
+
+---
+

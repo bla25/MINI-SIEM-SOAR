@@ -1,0 +1,832 @@
+2026-09-15T00:17:01.234615+05:30 shallow CRON[5235]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T00:17:01.240118+05:30 shallow CRON[5235]: pam_unix(cron:session): session closed for user root
+2026-09-15T00:26:09.494724+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T00:26:09.495639+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T00:26:17.843011+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T00:27:09.486298+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T00:27:09.486804+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T00:27:17.850148+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T00:59:18.674145+05:30 shallow systemd-logind[994]: The system will power off now!
+2026-09-15T00:59:18.677484+05:30 shallow systemd-logind[994]: System is powering down.
+2026-09-15T00:59:18.703427+05:30 shallow polkitd[979]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.61, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-15T00:59:18.704568+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-15T00:59:18.730728+05:30 shallow systemd-logind[994]: Session c2 logged out. Waiting for processes to exit.
+2026-09-15T03:22:59.520856+05:30 shallow systemd-logind[1051]: New seat seat0.
+2026-09-15T03:22:59.521001+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event7 (CASUE USB KB)
+2026-09-15T03:22:59.521004+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event9 (CASUE USB KB System Control)
+2026-09-15T03:22:59.521008+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event11 (Razer Razer DeathAdder Essential Keyboard)
+2026-09-15T03:22:59.521011+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event13 (Razer Razer DeathAdder Essential)
+2026-09-15T03:22:59.521015+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-15T03:22:59.521019+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-15T03:22:59.521022+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-15T03:22:59.521058+05:30 shallow polkitd[1033]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-15T03:22:59.521062+05:30 shallow polkitd[1033]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-15T03:22:59.521064+05:30 shallow polkitd[1033]: Finished loading, compiling and executing 14 rules
+2026-09-15T03:22:59.521071+05:30 shallow polkitd[1033]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-15T03:23:00.825439+05:30 shallow sshd[1809]: Server listening on 0.0.0.0 port 22.
+2026-09-15T03:23:00.825533+05:30 shallow sshd[1809]: Server listening on :: port 22.
+2026-09-15T03:23:02.351078+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event22 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-15T03:23:02.351169+05:30 shallow systemd-logind[1051]: Watching system buttons on /dev/input/event24 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-15T03:23:06.536297+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-15T03:23:06.560761+05:30 shallow systemd-logind[1051]: New session c1 of user lightdm.
+2026-09-15T03:23:06.585388+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-15T03:23:06.876954+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-15T03:23:15.135747+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-15T03:23:20.166418+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-15T03:23:20.166513+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-15T03:23:20.224410+05:30 shallow systemd-logind[1051]: Removed session c1.
+2026-09-15T03:23:20.226593+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-15T03:23:20.234327+05:30 shallow systemd-logind[1051]: New session c2 of user deep.
+2026-09-15T03:23:20.260325+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-15T03:23:20.467696+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-15T03:23:22.017164+05:30 shallow gnome-keyring-daemon[2319]: The Secret Service was already initialized
+2026-09-15T03:23:22.017399+05:30 shallow gnome-keyring-daemon[2319]: The PKCS#11 component was already initialized
+2026-09-15T03:23:22.017825+05:30 shallow gnome-keyring-daemon[2865]: discover_other_daemon: 1
+2026-09-15T03:23:23.020263+05:30 shallow polkitd[1033]: Registered Authentication Agent for unix-session:c2 (system bus name :1.59 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-15T03:23:23.194894+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T03:23:23.196151+05:30 shallow pkexec[3144]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-15T08:53:17.035521+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-15T08:57:26.645334+05:30 shallow sudo: pam_unix(sudo:auth): authentication failure; logname= uid=1000 euid=0 tty=/dev/pts/0 ruser=deep rhost=  user=deep
+2026-09-15T08:57:32.877369+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/systemctl status docker
+2026-09-15T08:57:32.878669+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T08:57:36.327594+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T08:58:05.307640+05:30 shallow sudo:     deep : TTY=pts/1 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/docker run hello-world
+2026-09-15T08:58:05.321276+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T08:58:05.841837+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:01:26.599155+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/dpkg -i minikube_latest_amd64.deb
+2026-09-15T09:01:26.600672+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:01:26.646283+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:02:33.533216+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/dpkg -i minikube_latest_amd64.deb
+2026-09-15T09:02:33.534733+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:02:35.360831+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:03:11.752906+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T09:03:11.763185+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:03:13.595105+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/local/bin/apt install kubectl --classic
+2026-09-15T09:03:13.596142+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:03:13.646252+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:03:30.164104+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/local/bin/apt install snap
+2026-09-15T09:03:30.165585+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:03:50.113193+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:04:08.123687+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:04:11.754323+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T09:04:11.755410+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:04:29.564674+05:30 shallow polkitd[1033]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: Success
+2026-09-15T09:04:36.508307+05:30 shallow polkitd[1033]: Operator of unix-session:c2 successfully authenticated as unix-user:deep to gain TEMPORARY authorization for action com.linuxmint.mintsources for unix-process:4471:10932 [xfce4-appfinder] (owned by unix-user:deep)
+2026-09-15T09:04:36.513189+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:04:36.514042+05:30 shallow pkexec[6724]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/bin/mintsources]
+2026-09-15T09:04:50.642882+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:05:11.749424+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+2026-09-15T09:05:11.751167+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:05:11.997694+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:05:27.328983+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/local/bin/apt install snap
+2026-09-15T09:05:27.330411+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:05:32.073403+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:06:42.005047+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+2026-09-15T09:06:42.006004+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:06:42.092071+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:07:12.705418+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/local/bin/apt update
+2026-09-15T09:07:12.706827+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:07:16.072816+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:08:07.622633+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/local/bin/apt install -y apt-transport-https ca-certificates curl gpg
+2026-09-15T09:08:07.636112+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:08:10.092048+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:08:12.106871+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+2026-09-15T09:08:12.108530+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:08:12.305958+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:08:48.520906+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mkdir -p -m 755 /etc/apt/keyrings
+2026-09-15T09:08:48.521524+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:08:48.525789+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:09:01.395772+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+2026-09-15T09:09:01.397109+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:09:03.278404+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:09:14.379212+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/tee /etc/apt/sources.list.d/kubernetes.list
+2026-09-15T09:09:14.380641+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:09:14.392521+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:09:31.434481+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/local/bin/apt update
+2026-09-15T09:09:31.435892+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:09:34.943677+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:09:42.321265+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+2026-09-15T09:09:42.322848+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:09:42.521239+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:09:54.520467+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep ; USER=root ; COMMAND=/usr/local/bin/apt install -y kubectl
+2026-09-15T09:09:54.521857+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:10:00.045789+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:11:12.535690+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+2026-09-15T09:11:12.537290+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T09:11:12.720860+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T09:17:01.933486+05:30 shallow CRON[12801]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T09:17:01.939251+05:30 shallow CRON[12801]: pam_unix(cron:session): session closed for user root
+2026-09-15T09:30:01.950437+05:30 shallow CRON[13368]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T09:30:01.954558+05:30 shallow CRON[13368]: pam_unix(cron:session): session closed for user root
+2026-09-15T10:07:16.939305+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-15T10:07:16.942485+05:30 shallow systemd-logind[1051]: Session c2 logged out. Waiting for processes to exit.
+2026-09-15T10:07:16.957196+05:30 shallow pkexec[15090]: deep: Error executing command as another user: Not authorized [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 1]
+2026-09-15T10:07:16.969142+05:30 shallow polkitd[1033]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.59, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-15T10:07:20.997583+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-15T10:07:21.004186+05:30 shallow systemd-logind[1051]: New session c3 of user lightdm.
+2026-09-15T10:07:21.038529+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-15T10:07:21.274276+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-15T10:07:21.954974+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user ""
+2026-09-15T10:07:25.873444+05:30 shallow systemd-logind[1051]: The system will power off now!
+2026-09-15T10:07:25.883323+05:30 shallow systemd-logind[1051]: System is powering down.
+2026-09-15T10:07:25.902599+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+2026-09-15T10:07:25.939103+05:30 shallow systemd-logind[1051]: Removed session c2.
+2026-09-15T10:07:25.944989+05:30 shallow systemd-logind[1051]: Session c3 logged out. Waiting for processes to exit.
+2026-09-15T10:07:31.747763+05:30 shallow systemd-logind[975]: New seat seat0.
+2026-09-15T10:07:31.747769+05:30 shallow systemd-logind[975]: Watching system buttons on /dev/input/event7 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-15T10:07:31.747782+05:30 shallow systemd-logind[975]: Watching system buttons on /dev/input/event9 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-15T10:07:31.747787+05:30 shallow systemd-logind[975]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-15T10:07:31.747796+05:30 shallow systemd-logind[975]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-15T10:07:31.747800+05:30 shallow systemd-logind[975]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-15T10:07:31.747883+05:30 shallow polkitd[954]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-15T10:07:31.747888+05:30 shallow polkitd[954]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-15T10:07:31.747902+05:30 shallow polkitd[954]: Finished loading, compiling and executing 14 rules
+2026-09-15T10:07:31.747918+05:30 shallow polkitd[954]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-15T10:07:34.745527+05:30 shallow sshd[1824]: Server listening on 0.0.0.0 port 22.
+2026-09-15T10:07:34.745625+05:30 shallow sshd[1824]: Server listening on :: port 22.
+2026-09-15T10:07:40.370775+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-15T10:07:40.385834+05:30 shallow systemd-logind[975]: New session c1 of user lightdm.
+2026-09-15T10:07:40.407891+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-15T10:07:40.669912+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-15T10:07:58.783808+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-15T10:56:32.631545+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-15T10:56:32.631639+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-15T10:56:32.686269+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+2026-09-15T10:56:32.690330+05:30 shallow systemd-logind[975]: Removed session c1.
+2026-09-15T10:56:32.692350+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-15T10:56:32.711734+05:30 shallow systemd-logind[975]: New session c2 of user deep.
+2026-09-15T10:56:32.731948+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-15T10:56:33.030416+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-15T10:56:34.801330+05:30 shallow gnome-keyring-daemon[2641]: The Secret Service was already initialized
+2026-09-15T10:56:34.801438+05:30 shallow gnome-keyring-daemon[2641]: The PKCS#11 component was already initialized
+2026-09-15T10:56:34.801882+05:30 shallow gnome-keyring-daemon[2932]: discover_other_daemon: 1
+2026-09-15T10:56:35.943445+05:30 shallow polkitd[954]: Registered Authentication Agent for unix-session:c2 (system bus name :1.61 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-15T10:56:36.047165+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T10:56:36.048810+05:30 shallow pkexec[3141]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-15T10:56:42.803373+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-15T10:57:31.306606+05:30 shallow CRON[4575]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T10:57:31.310424+05:30 shallow CRON[4575]: pam_unix(cron:session): session closed for user root
+2026-09-15T11:06:37.660258+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T11:06:37.666784+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T11:06:40.173787+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T11:07:37.644690+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T11:07:37.644940+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T11:07:40.049709+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T11:17:01.322226+05:30 shallow CRON[8344]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T11:17:01.335303+05:30 shallow CRON[8344]: pam_unix(cron:session): session closed for user root
+2026-09-15T11:30:01.347333+05:30 shallow CRON[9289]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T11:30:01.350441+05:30 shallow CRON[9289]: pam_unix(cron:session): session closed for user root
+2026-09-15T12:11:34.730189+05:30 shallow systemd-logind[975]: The system will power off now!
+2026-09-15T12:11:34.732442+05:30 shallow systemd-logind[975]: System is powering down.
+2026-09-15T12:11:34.751473+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-15T12:11:34.752706+05:30 shallow polkitd[954]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.61, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-15T12:11:34.786600+05:30 shallow systemd-logind[975]: Session c2 logged out. Waiting for processes to exit.
+2026-09-15T12:11:36.749084+05:30 shallow systemd-logind[985]: New seat seat0.
+2026-09-15T12:11:36.749130+05:30 shallow systemd-logind[985]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-15T12:11:36.749136+05:30 shallow systemd-logind[985]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-15T12:11:36.749141+05:30 shallow systemd-logind[985]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-15T12:11:36.749181+05:30 shallow polkitd[966]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-15T12:11:36.749185+05:30 shallow polkitd[966]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-15T12:11:36.749497+05:30 shallow polkitd[966]: Finished loading, compiling and executing 14 rules
+2026-09-15T12:11:36.749871+05:30 shallow polkitd[966]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-15T12:11:38.781200+05:30 shallow sshd[1739]: Server listening on 0.0.0.0 port 22.
+2026-09-15T12:11:38.781375+05:30 shallow sshd[1739]: Server listening on :: port 22.
+2026-09-15T12:11:39.806353+05:30 shallow systemd-logind[985]: Watching system buttons on /dev/input/event15 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-15T12:11:39.808209+05:30 shallow systemd-logind[985]: Watching system buttons on /dev/input/event17 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-15T12:11:45.085984+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-15T12:11:45.114534+05:30 shallow systemd-logind[985]: New session c1 of user lightdm.
+2026-09-15T12:11:45.148131+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-15T12:11:45.539636+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-15T12:12:00.717713+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-15T12:12:04.178164+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-15T12:12:04.178275+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-15T12:12:04.256421+05:30 shallow systemd-logind[985]: Removed session c1.
+2026-09-15T12:12:04.257425+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-15T12:12:04.285478+05:30 shallow systemd-logind[985]: New session c2 of user deep.
+2026-09-15T12:12:04.322034+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-15T12:12:04.696236+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-15T12:12:06.835031+05:30 shallow gnome-keyring-daemon[2642]: The Secret Service was already initialized
+2026-09-15T12:12:06.835240+05:30 shallow gnome-keyring-daemon[2642]: The PKCS#11 component was already initialized
+2026-09-15T12:12:06.835652+05:30 shallow gnome-keyring-daemon[2933]: discover_other_daemon: 1
+2026-09-15T12:12:08.295399+05:30 shallow polkitd[966]: Registered Authentication Agent for unix-session:c2 (system bus name :1.59 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-15T12:12:08.517596+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T12:12:08.519291+05:30 shallow pkexec[3202]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-15T12:12:14.369732+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-15T12:13:42.483163+05:30 shallow systemd-logind[985]: The system will power off now!
+2026-09-15T12:13:42.486424+05:30 shallow systemd-logind[985]: System is powering down.
+2026-09-15T12:13:42.512372+05:30 shallow polkitd[966]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.59, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-15T12:13:42.519822+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-15T12:13:42.567979+05:30 shallow systemd-logind[985]: Session c2 logged out. Waiting for processes to exit.
+2026-09-15T12:13:44.585150+05:30 shallow systemd-logind[1030]: New seat seat0.
+2026-09-15T12:13:44.585207+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-15T12:13:44.585210+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-15T12:13:44.585219+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-15T12:13:44.585239+05:30 shallow polkitd[1012]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-15T12:13:44.585242+05:30 shallow polkitd[1012]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-15T12:13:44.585247+05:30 shallow polkitd[1012]: Finished loading, compiling and executing 14 rules
+2026-09-15T12:13:44.585257+05:30 shallow polkitd[1012]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-15T12:13:46.531264+05:30 shallow sshd[1751]: Server listening on 0.0.0.0 port 22.
+2026-09-15T12:13:46.531445+05:30 shallow sshd[1751]: Server listening on :: port 22.
+2026-09-15T12:13:47.593533+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event17 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-15T12:13:47.593646+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event15 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-15T12:13:52.793453+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-15T12:13:52.815947+05:30 shallow systemd-logind[1030]: New session c1 of user lightdm.
+2026-09-15T12:13:52.855700+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-15T12:13:53.249862+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-15T12:14:07.198938+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event19 (Razer Razer DeathAdder Essential Keyboard)
+2026-09-15T12:14:07.199051+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event21 (Razer Razer DeathAdder Essential)
+2026-09-15T12:14:10.806287+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event22 (CASUE USB KB)
+2026-09-15T12:14:10.811120+05:30 shallow systemd-logind[1030]: Watching system buttons on /dev/input/event24 (CASUE USB KB System Control)
+2026-09-15T17:03:21.849899+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-15T17:03:25.459169+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-15T17:03:25.459280+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-15T17:03:25.534524+05:30 shallow systemd-logind[1030]: Removed session c1.
+2026-09-15T17:03:25.534644+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-15T17:03:25.549761+05:30 shallow systemd-logind[1030]: New session c2 of user deep.
+2026-09-15T17:03:25.600084+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-15T17:03:25.975445+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-15T17:03:28.126362+05:30 shallow gnome-keyring-daemon[2842]: The Secret Service was already initialized
+2026-09-15T17:03:28.126493+05:30 shallow gnome-keyring-daemon[2842]: The PKCS#11 component was already initialized
+2026-09-15T17:03:28.126967+05:30 shallow gnome-keyring-daemon[3131]: discover_other_daemon: 1
+2026-09-15T17:03:29.540511+05:30 shallow polkitd[1012]: Registered Authentication Agent for unix-session:c2 (system bus name :1.57 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-15T17:03:29.928748+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T17:03:29.929558+05:30 shallow pkexec[3484]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-15T17:03:35.810998+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-15T17:13:32.803462+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T17:13:32.805247+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T17:14:20.077789+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T17:14:32.792000+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T17:14:32.793527+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T17:14:37.840238+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T17:17:01.320314+05:30 shallow CRON[7646]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T17:17:01.326177+05:30 shallow CRON[7646]: pam_unix(cron:session): session closed for user root
+2026-09-15T17:30:01.340893+05:30 shallow CRON[8269]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T17:30:01.345543+05:30 shallow CRON[8269]: pam_unix(cron:session): session closed for user root
+2026-09-15T17:33:26.863676+05:30 shallow systemd-logind[1030]: The system will power off now!
+2026-09-15T17:33:26.867287+05:30 shallow systemd-logind[1030]: System is powering down.
+2026-09-15T17:33:26.893929+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-15T17:33:26.898795+05:30 shallow polkitd[1012]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.57, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-15T17:33:26.967852+05:30 shallow systemd-logind[1030]: Session c2 logged out. Waiting for processes to exit.
+2026-09-15T17:33:27.223825+05:30 shallow systemd-logind[969]: New seat seat0.
+2026-09-15T17:33:27.223830+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event7 (CASUE USB KB)
+2026-09-15T17:33:27.223834+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event9 (CASUE USB KB System Control)
+2026-09-15T17:33:27.223839+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event11 (Razer Razer DeathAdder Essential Keyboard)
+2026-09-15T17:33:27.223844+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event13 (Razer Razer DeathAdder Essential)
+2026-09-15T17:33:27.223848+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-15T17:33:27.223852+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-15T17:33:27.223856+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-15T17:33:27.247179+05:30 shallow polkitd[951]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-15T17:33:27.247551+05:30 shallow polkitd[951]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-15T17:33:27.252084+05:30 shallow polkitd[951]: Finished loading, compiling and executing 14 rules
+2026-09-15T17:33:27.252620+05:30 shallow polkitd[951]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-15T17:33:30.347155+05:30 shallow sshd[1805]: Server listening on 0.0.0.0 port 22.
+2026-09-15T17:33:30.347269+05:30 shallow sshd[1805]: Server listening on :: port 22.
+2026-09-15T17:33:31.866287+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event22 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-15T17:33:31.868269+05:30 shallow systemd-logind[969]: Watching system buttons on /dev/input/event24 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-15T17:33:36.140100+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-15T17:33:36.164961+05:30 shallow systemd-logind[969]: New session c1 of user lightdm.
+2026-09-15T17:33:36.191386+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-15T17:33:36.485494+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-15T17:33:39.919314+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-15T17:33:44.170041+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-15T17:33:44.170188+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-15T17:33:44.229471+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-15T17:33:44.230764+05:30 shallow systemd-logind[969]: Removed session c1.
+2026-09-15T17:33:44.263013+05:30 shallow systemd-logind[969]: New session c2 of user deep.
+2026-09-15T17:33:44.285590+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-15T17:33:44.561669+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-15T17:33:46.430038+05:30 shallow gnome-keyring-daemon[2302]: The Secret Service was already initialized
+2026-09-15T17:33:46.430239+05:30 shallow gnome-keyring-daemon[2302]: The PKCS#11 component was already initialized
+2026-09-15T17:33:46.430673+05:30 shallow gnome-keyring-daemon[2590]: discover_other_daemon: 1
+2026-09-15T17:33:47.542580+05:30 shallow polkitd[951]: Registered Authentication Agent for unix-session:c2 (system bus name :1.52 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-15T17:33:47.756701+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T17:33:47.758640+05:30 shallow pkexec[2906]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-15T17:33:54.562213+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-15T19:44:27.323067+05:30 shallow CRON[4528]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T19:44:27.326879+05:30 shallow CRON[4528]: pam_unix(cron:session): session closed for user root
+2026-09-15T19:44:27.335197+05:30 shallow CRON[4530]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T19:44:27.338972+05:30 shallow CRON[4530]: pam_unix(cron:session): session closed for user root
+2026-09-15T19:54:14.478804+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T19:54:14.479344+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T19:54:18.476427+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T19:55:14.469953+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-15T19:55:14.471134+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-15T19:55:17.252976+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-15T20:17:01.355187+05:30 shallow CRON[8234]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-15T20:17:01.368509+05:30 shallow CRON[8234]: pam_unix(cron:session): session closed for user root
+2026-09-15T20:26:47.067197+05:30 shallow systemd-logind[969]: The system will power off now!
+2026-09-15T20:26:47.070405+05:30 shallow systemd-logind[969]: System is powering down.
+2026-09-15T20:26:47.091885+05:30 shallow polkitd[951]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.52, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-15T20:26:47.098304+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-15T20:26:47.124340+05:30 shallow systemd-logind[969]: Session c2 logged out. Waiting for processes to exit.
+2026-09-16T06:23:54.676407+05:30 shallow systemd-logind[1062]: New seat seat0.
+2026-09-16T06:23:54.676422+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event7 (CASUE USB KB)
+2026-09-16T06:23:54.676425+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event9 (CASUE USB KB System Control)
+2026-09-16T06:23:54.676428+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event11 (Razer Razer DeathAdder Essential Keyboard)
+2026-09-16T06:23:54.676431+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event13 (Razer Razer DeathAdder Essential)
+2026-09-16T06:23:54.676434+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event14 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-16T06:23:54.676439+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event16 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-16T06:23:54.676442+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-16T06:23:54.676445+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-16T06:23:54.676448+05:30 shallow systemd-logind[1062]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-16T06:23:54.730778+05:30 shallow polkitd[1035]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T06:23:54.731102+05:30 shallow polkitd[1035]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T06:23:54.738009+05:30 shallow polkitd[1035]: Finished loading, compiling and executing 14 rules
+2026-09-16T06:23:54.739120+05:30 shallow polkitd[1035]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-16T06:23:55.898697+05:30 shallow sshd[1961]: Server listening on 0.0.0.0 port 22.
+2026-09-16T06:23:55.898748+05:30 shallow sshd[1961]: Server listening on :: port 22.
+2026-09-16T06:24:01.737018+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-16T06:24:01.756742+05:30 shallow systemd-logind[1062]: New session c1 of user lightdm.
+2026-09-16T06:24:01.778281+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-16T06:24:02.007756+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-16T06:24:16.392421+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-16T06:24:21.764671+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-16T06:24:21.764792+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-16T06:24:21.822458+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+2026-09-16T06:24:21.827031+05:30 shallow systemd-logind[1062]: Removed session c1.
+2026-09-16T06:24:21.829542+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-16T06:24:21.836870+05:30 shallow systemd-logind[1062]: New session c2 of user deep.
+2026-09-16T06:24:21.869643+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-16T06:24:22.165864+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-16T11:54:09.057292+05:30 shallow gnome-keyring-daemon[2805]: The Secret Service was already initialized
+2026-09-16T11:54:09.057540+05:30 shallow gnome-keyring-daemon[2805]: The PKCS#11 component was already initialized
+2026-09-16T11:54:09.058020+05:30 shallow gnome-keyring-daemon[3095]: discover_other_daemon: 1
+2026-09-16T11:54:10.103159+05:30 shallow polkitd[1035]: Registered Authentication Agent for unix-session:c2 (system bus name :1.58 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-16T11:54:10.342026+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T11:54:10.342928+05:30 shallow pkexec[3432]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-16T11:54:17.100084+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-16T12:04:33.574981+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T12:04:33.576116+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T12:05:02.855451+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T12:05:33.563530+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T12:05:33.564370+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T12:05:36.702403+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T12:17:01.971376+05:30 shallow CRON[6888]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T12:17:01.977031+05:30 shallow CRON[6888]: pam_unix(cron:session): session closed for user root
+2026-09-16T12:30:01.987717+05:30 shallow CRON[7002]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T12:30:01.991559+05:30 shallow CRON[7002]: pam_unix(cron:session): session closed for user root
+2026-09-16T13:17:01.013704+05:30 shallow CRON[7215]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T13:17:01.019098+05:30 shallow CRON[7215]: pam_unix(cron:session): session closed for user root
+2026-09-16T13:22:59.143419+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+2026-09-16T13:22:59.144386+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T13:22:59.249239+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T13:23:00.733797+05:30 shallow polkitd[1035]: Identity `unix-group:admin' is not valid, ignoring: No UNIX group with name admin: Success
+2026-09-16T13:23:06.122019+05:30 shallow polkitd[1035]: Operator of unix-session:c2 successfully authenticated as unix-user:deep to gain TEMPORARY authorization for action org.aptkit.install-or-remove-packages for system-bus-name::1.115 [mintUpdate] (owned by unix-user:deep)
+2026-09-16T13:30:01.027656+05:30 shallow CRON[7806]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T13:30:01.029371+05:30 shallow CRON[7806]: pam_unix(cron:session): session closed for user root
+2026-09-16T13:32:21.141361+05:30 shallow polkitd[1035]: Reloading rules
+2026-09-16T13:32:21.141659+05:30 shallow polkitd[1035]: Collecting garbage unconditionally...
+2026-09-16T13:32:21.141709+05:30 shallow polkitd[1035]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T13:32:21.141742+05:30 shallow polkitd[1035]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T13:32:21.142794+05:30 shallow polkitd[1035]: Finished loading, compiling and executing 14 rules
+2026-09-16T13:32:21.142821+05:30 shallow polkitd[1035]: Reloading rules
+2026-09-16T13:32:21.142842+05:30 shallow polkitd[1035]: Collecting garbage unconditionally...
+2026-09-16T13:32:21.142863+05:30 shallow polkitd[1035]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T13:32:21.142884+05:30 shallow polkitd[1035]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T13:32:21.143775+05:30 shallow polkitd[1035]: Finished loading, compiling and executing 14 rules
+2026-09-16T13:32:21.143804+05:30 shallow polkitd[1035]: Reloading rules
+2026-09-16T13:32:21.143829+05:30 shallow polkitd[1035]: Collecting garbage unconditionally...
+2026-09-16T13:32:21.143844+05:30 shallow polkitd[1035]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T13:32:21.143865+05:30 shallow polkitd[1035]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T13:32:21.144692+05:30 shallow polkitd[1035]: Finished loading, compiling and executing 14 rules
+2026-09-16T13:32:21.144720+05:30 shallow polkitd[1035]: Reloading rules
+2026-09-16T13:32:21.144736+05:30 shallow polkitd[1035]: Collecting garbage unconditionally...
+2026-09-16T13:32:21.144754+05:30 shallow polkitd[1035]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T13:32:21.144771+05:30 shallow polkitd[1035]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T13:32:21.146441+05:30 shallow polkitd[1035]: Finished loading, compiling and executing 14 rules
+2026-09-16T13:33:24.718113+05:30 shallow polkitd[28341]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T13:33:24.718150+05:30 shallow polkitd[28341]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T13:33:24.719975+05:30 shallow polkitd[28341]: Finished loading, compiling and executing 14 rules
+2026-09-16T13:33:24.720404+05:30 shallow polkitd[28341]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-16T13:33:24.750102+05:30 shallow polkitd[28341]: Registered Authentication Agent for unix-session:c2 (system bus name :1.58 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-16T13:38:12.983098+05:30 shallow systemd-logind[1062]: The system will reboot now!
+2026-09-16T13:38:12.986729+05:30 shallow systemd-logind[1062]: System is rebooting.
+2026-09-16T13:38:13.017658+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-16T13:38:13.018847+05:30 shallow polkitd[28341]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.58, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-16T13:38:13.050165+05:30 shallow systemd-logind[1062]: Session c2 logged out. Waiting for processes to exit.
+2026-09-16T13:38:17.215624+05:30 shallow systemd-logind[971]: New seat seat0.
+2026-09-16T13:38:17.215651+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event7 (CASUE USB KB)
+2026-09-16T13:38:17.215657+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event9 (CASUE USB KB System Control)
+2026-09-16T13:38:17.215664+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event11 (Razer Razer DeathAdder Essential Keyboard)
+2026-09-16T13:38:17.215680+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event13 (Razer Razer DeathAdder Essential)
+2026-09-16T13:38:17.215688+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-16T13:38:17.215694+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-16T13:38:17.215703+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-16T13:38:17.271401+05:30 shallow polkitd[953]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T13:38:17.271707+05:30 shallow polkitd[953]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T13:38:17.275465+05:30 shallow polkitd[953]: Finished loading, compiling and executing 14 rules
+2026-09-16T13:38:17.276146+05:30 shallow polkitd[953]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-16T13:38:18.528350+05:30 shallow sshd[1810]: Server listening on 0.0.0.0 port 22.
+2026-09-16T13:38:18.528408+05:30 shallow sshd[1810]: Server listening on :: port 22.
+2026-09-16T13:38:20.099165+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event22 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-16T13:38:20.099273+05:30 shallow systemd-logind[971]: Watching system buttons on /dev/input/event24 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-16T13:38:24.417599+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-16T13:38:24.442353+05:30 shallow systemd-logind[971]: New session c1 of user lightdm.
+2026-09-16T13:38:24.463307+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-16T13:38:24.703880+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-16T13:38:29.100356+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-16T13:38:35.991416+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-16T13:38:35.991513+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-16T13:38:36.056270+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-16T13:38:36.059150+05:30 shallow systemd-logind[971]: Removed session c1.
+2026-09-16T13:38:36.084996+05:30 shallow systemd-logind[971]: New session c2 of user deep.
+2026-09-16T13:38:36.106141+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-16T13:38:36.403535+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-16T13:38:38.299082+05:30 shallow gnome-keyring-daemon[2690]: The Secret Service was already initialized
+2026-09-16T13:38:38.299282+05:30 shallow gnome-keyring-daemon[2690]: The PKCS#11 component was already initialized
+2026-09-16T13:38:38.299712+05:30 shallow gnome-keyring-daemon[2978]: discover_other_daemon: 1
+2026-09-16T13:38:39.379455+05:30 shallow polkitd[953]: Registered Authentication Agent for unix-session:c2 (system bus name :1.58 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-16T13:38:39.544659+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T13:38:39.545517+05:30 shallow pkexec[3280]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-16T13:39:03.830532+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-16T13:48:59.149647+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T13:48:59.150292+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T13:49:01.897450+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T13:53:38.827846+05:30 shallow systemd-logind[971]: The system will power off now!
+2026-09-16T13:53:38.839176+05:30 shallow systemd-logind[971]: System is powering down.
+2026-09-16T13:53:38.866137+05:30 shallow polkitd[953]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.58, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-16T13:53:38.866487+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-16T13:53:38.901369+05:30 shallow systemd-logind[971]: Session c2 logged out. Waiting for processes to exit.
+2026-09-16T13:53:40.857743+05:30 shallow systemd-logind[1007]: New seat seat0.
+2026-09-16T13:53:40.857747+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event7 (CASUE USB KB)
+2026-09-16T13:53:40.857751+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event9 (CASUE USB KB System Control)
+2026-09-16T13:53:40.857755+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event11 (Razer Razer DeathAdder Essential Keyboard)
+2026-09-16T13:53:40.857759+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event13 (Razer Razer DeathAdder Essential)
+2026-09-16T13:53:40.857762+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-16T13:53:40.857766+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-16T13:53:40.857770+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-16T13:53:40.885639+05:30 shallow polkitd[978]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T13:53:40.885832+05:30 shallow polkitd[978]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T13:53:40.890218+05:30 shallow polkitd[978]: Finished loading, compiling and executing 14 rules
+2026-09-16T13:53:40.890624+05:30 shallow polkitd[978]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-16T13:53:42.405114+05:30 shallow sshd[1770]: Server listening on 0.0.0.0 port 22.
+2026-09-16T13:53:42.405218+05:30 shallow sshd[1770]: Server listening on :: port 22.
+2026-09-16T13:53:43.485179+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event22 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-16T13:53:43.486593+05:30 shallow systemd-logind[1007]: Watching system buttons on /dev/input/event24 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-16T13:53:48.915481+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-16T13:53:48.935848+05:30 shallow systemd-logind[1007]: New session c1 of user lightdm.
+2026-09-16T13:53:48.974399+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-16T13:53:49.351290+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-16T14:37:34.603864+05:30 shallow CRON[3155]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T14:37:34.607852+05:30 shallow CRON[3155]: pam_unix(cron:session): session closed for user root
+2026-09-16T14:47:55.666024+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user ""
+2026-09-16T14:48:02.489983+05:30 shallow lightdm: pam_unix(lightdm:auth): check pass; user unknown
+2026-09-16T14:48:02.490158+05:30 shallow lightdm: pam_unix(lightdm:auth): authentication failure; logname= uid=0 euid=0 tty=:0 ruser= rhost= 
+2026-09-16T14:48:06.051036+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-16T14:48:11.675186+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-16T14:48:11.675399+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-16T14:48:11.755001+05:30 shallow systemd-logind[1007]: Removed session c1.
+2026-09-16T14:48:11.755199+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-16T14:48:11.782940+05:30 shallow systemd-logind[1007]: New session c2 of user deep.
+2026-09-16T14:48:11.819539+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-16T14:48:12.200149+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-16T14:48:14.357827+05:30 shallow gnome-keyring-daemon[7963]: The Secret Service was already initialized
+2026-09-16T14:48:14.358153+05:30 shallow gnome-keyring-daemon[7963]: The PKCS#11 component was already initialized
+2026-09-16T14:48:14.358676+05:30 shallow gnome-keyring-daemon[8251]: discover_other_daemon: 1
+2026-09-16T14:48:15.792116+05:30 shallow polkitd[978]: Registered Authentication Agent for unix-session:c2 (system bus name :1.60 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-16T14:48:16.225420+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T14:48:16.226864+05:30 shallow pkexec[8812]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-16T14:48:21.935120+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-16T14:58:19.039457+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T14:58:19.040188+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T14:58:26.210605+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T15:17:01.629256+05:30 shallow CRON[13536]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T15:17:01.641556+05:30 shallow CRON[13536]: pam_unix(cron:session): session closed for user root
+2026-09-16T15:30:01.653199+05:30 shallow CRON[13610]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T15:30:01.657164+05:30 shallow CRON[13610]: pam_unix(cron:session): session closed for user root
+2026-09-16T15:48:59.035269+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T15:48:59.036918+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T15:49:05.295001+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T15:49:12.876996+05:30 shallow systemd-logind[1007]: The system will power off now!
+2026-09-16T15:49:12.886618+05:30 shallow systemd-logind[1007]: System is powering down.
+2026-09-16T15:49:12.897636+05:30 shallow polkitd[978]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.60, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-16T15:49:12.898361+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-16T15:49:12.923078+05:30 shallow systemd-logind[1007]: Session c2 logged out. Waiting for processes to exit.
+2026-09-16T15:49:13.117529+05:30 shallow systemd-logind[990]: New seat seat0.
+2026-09-16T15:49:13.117824+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event7 (CASUE USB KB)
+2026-09-16T15:49:13.117827+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event9 (CASUE USB KB System Control)
+2026-09-16T15:49:13.117830+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event11 (Razer Razer DeathAdder Essential Keyboard)
+2026-09-16T15:49:13.117833+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event13 (Razer Razer DeathAdder Essential)
+2026-09-16T15:49:13.117836+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-16T15:49:13.117839+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-16T15:49:13.117842+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-16T15:49:13.138713+05:30 shallow polkitd[971]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T15:49:13.139162+05:30 shallow polkitd[971]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T15:49:13.142839+05:30 shallow polkitd[971]: Finished loading, compiling and executing 14 rules
+2026-09-16T15:49:13.143855+05:30 shallow polkitd[971]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-16T15:49:16.151792+05:30 shallow sshd[1823]: Server listening on 0.0.0.0 port 22.
+2026-09-16T15:49:16.151863+05:30 shallow sshd[1823]: Server listening on :: port 22.
+2026-09-16T15:49:17.678145+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event24 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-16T15:49:17.679463+05:30 shallow systemd-logind[990]: Watching system buttons on /dev/input/event22 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-16T15:49:21.919693+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-16T15:49:21.941627+05:30 shallow systemd-logind[990]: New session c1 of user lightdm.
+2026-09-16T15:49:21.962040+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-16T15:49:22.194340+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-16T15:49:34.601175+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-16T15:49:38.661406+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-16T15:49:38.661516+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-16T15:49:38.718288+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-16T15:49:38.735719+05:30 shallow systemd-logind[990]: New session c2 of user deep.
+2026-09-16T15:49:38.741651+05:30 shallow systemd-logind[990]: Removed session c1.
+2026-09-16T15:49:38.757624+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-16T15:49:39.073711+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-16T15:49:40.918701+05:30 shallow gnome-keyring-daemon[2714]: The Secret Service was already initialized
+2026-09-16T15:49:40.918961+05:30 shallow gnome-keyring-daemon[2714]: The PKCS#11 component was already initialized
+2026-09-16T15:49:40.919522+05:30 shallow gnome-keyring-daemon[3002]: discover_other_daemon: 1
+2026-09-16T15:49:41.948601+05:30 shallow polkitd[971]: Registered Authentication Agent for unix-session:c2 (system bus name :1.57 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-16T15:49:42.179606+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T15:49:42.180483+05:30 shallow pkexec[3313]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-16T16:56:10.146109+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-16T16:56:22.222739+05:30 shallow CRON[4035]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T16:56:22.226562+05:30 shallow CRON[4035]: pam_unix(cron:session): session closed for user root
+2026-09-16T17:06:04.800924+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T17:06:04.801684+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T17:06:08.907818+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T17:17:01.239326+05:30 shallow CRON[6993]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T17:17:01.249364+05:30 shallow CRON[6993]: pam_unix(cron:session): session closed for user root
+2026-09-16T17:20:28.776989+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-16T17:20:28.779937+05:30 shallow systemd-logind[990]: Session c2 logged out. Waiting for processes to exit.
+2026-09-16T17:20:28.800657+05:30 shallow polkitd[971]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.57, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-16T17:20:32.860324+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-16T17:20:32.883010+05:30 shallow systemd-logind[990]: New session c3 of user lightdm.
+2026-09-16T17:20:32.906523+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-16T17:20:33.185615+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-16T17:20:33.828992+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user ""
+2026-09-16T17:20:36.388831+05:30 shallow lightdm: pam_unix(lightdm:auth): check pass; user unknown
+2026-09-16T17:20:36.389009+05:30 shallow lightdm: pam_unix(lightdm:auth): authentication failure; logname= uid=0 euid=0 tty=:0 ruser= rhost= 
+2026-09-16T17:20:43.167116+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-16T17:20:47.835153+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-16T17:20:47.835290+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-16T17:20:47.898932+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+2026-09-16T17:20:47.902826+05:30 shallow systemd-logind[990]: Removed session c3.
+2026-09-16T17:20:47.905386+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-16T17:20:47.909983+05:30 shallow systemd-logind[990]: New session c4 of user deep.
+2026-09-16T17:20:47.925359+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-16T17:20:49.761913+05:30 shallow gnome-keyring-daemon[2714]: The SSH agent was already initialized
+2026-09-16T17:20:49.762204+05:30 shallow gnome-keyring-daemon[2714]: The Secret Service was already initialized
+2026-09-16T17:20:49.762337+05:30 shallow gnome-keyring-daemon[2714]: The PKCS#11 component was already initialized
+2026-09-16T17:20:49.762797+05:30 shallow gnome-keyring-daemon[7843]: discover_other_daemon: 1
+2026-09-16T17:20:50.789695+05:30 shallow polkitd[971]: Registered Authentication Agent for unix-session:c4 (system bus name :1.122 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-16T17:20:50.952859+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T17:20:50.953617+05:30 shallow pkexec[8159]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-16T17:20:58.144047+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-16T17:30:01.261842+05:30 shallow CRON[9513]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T17:30:01.265917+05:30 shallow CRON[9513]: pam_unix(cron:session): session closed for user root
+2026-09-16T17:30:52.159794+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T17:30:52.160661+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T17:30:55.677080+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T18:17:01.289561+05:30 shallow CRON[12410]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T18:17:01.294844+05:30 shallow CRON[12410]: pam_unix(cron:session): session closed for user root
+2026-09-16T18:30:01.307434+05:30 shallow CRON[12797]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T18:30:01.311186+05:30 shallow CRON[12797]: pam_unix(cron:session): session closed for user root
+2026-09-16T19:06:04.162838+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T19:06:04.173089+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T19:06:34.854691+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T19:17:01.333965+05:30 shallow CRON[15265]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T19:17:01.339286+05:30 shallow CRON[15265]: pam_unix(cron:session): session closed for user root
+2026-09-16T19:21:41.398355+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep/projects/smart_bin_application ; USER=root ; COMMAND=/usr/local/bin/apt install tmux
+2026-09-16T19:21:41.412029+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T19:21:49.474294+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T19:22:22.183458+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
+2026-09-16T19:22:22.184991+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T19:22:22.454926+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T19:27:23.159598+05:30 shallow systemd-logind[990]: The system will power off now!
+2026-09-16T19:27:23.170222+05:30 shallow systemd-logind[990]: System is powering down.
+2026-09-16T19:27:23.195950+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-16T19:27:23.196317+05:30 shallow polkitd[971]: Unregistered Authentication Agent for unix-session:c4 (system bus name :1.122, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-16T19:27:23.238230+05:30 shallow systemd-logind[990]: Removed session c2.
+2026-09-16T19:27:23.247299+05:30 shallow systemd-logind[990]: Session c4 logged out. Waiting for processes to exit.
+2026-09-16T19:27:25.157910+05:30 shallow systemd-logind[993]: New seat seat0.
+2026-09-16T19:27:25.157972+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event7 (CASUE USB KB)
+2026-09-16T19:27:25.157977+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event9 (CASUE USB KB System Control)
+2026-09-16T19:27:25.157982+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event11 (Razer Razer DeathAdder Essential Keyboard)
+2026-09-16T19:27:25.157986+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event13 (Razer Razer DeathAdder Essential)
+2026-09-16T19:27:25.158009+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-16T19:27:25.158015+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-16T19:27:25.158019+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-09-16T19:27:25.180991+05:30 shallow polkitd[958]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-16T19:27:25.181444+05:30 shallow polkitd[958]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-16T19:27:25.183626+05:30 shallow polkitd[958]: Finished loading, compiling and executing 14 rules
+2026-09-16T19:27:25.184416+05:30 shallow polkitd[958]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-16T19:27:27.081098+05:30 shallow sshd[1804]: Server listening on 0.0.0.0 port 22.
+2026-09-16T19:27:27.081227+05:30 shallow sshd[1804]: Server listening on :: port 22.
+2026-09-16T19:27:27.854150+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event22 (ITE Tech. Inc. ITE Device(8176) Keyboard)
+2026-09-16T19:27:27.861777+05:30 shallow systemd-logind[993]: Watching system buttons on /dev/input/event24 (ITE Tech. Inc. ITE Device(8295) Keyboard)
+2026-09-16T19:27:33.511139+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-16T19:27:33.535355+05:30 shallow systemd-logind[993]: New session c1 of user lightdm.
+2026-09-16T19:27:33.574759+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-16T19:27:33.940676+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-16T19:27:35.619078+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user ""
+2026-09-16T19:27:38.281813+05:30 shallow lightdm: pam_unix(lightdm:auth): check pass; user unknown
+2026-09-16T19:27:38.281984+05:30 shallow lightdm: pam_unix(lightdm:auth): authentication failure; logname= uid=0 euid=0 tty=:0 ruser= rhost= 
+2026-09-16T19:27:48.587755+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-16T23:06:30.984637+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-16T23:06:30.984765+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-16T23:06:31.055566+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-16T23:06:31.072337+05:30 shallow systemd-logind[993]: New session c2 of user deep.
+2026-09-16T23:06:31.084323+05:30 shallow systemd-logind[993]: Removed session c1.
+2026-09-16T23:06:31.112899+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-16T23:06:31.482086+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-16T23:06:33.641878+05:30 shallow gnome-keyring-daemon[2718]: The Secret Service was already initialized
+2026-09-16T23:06:33.642124+05:30 shallow gnome-keyring-daemon[2718]: The PKCS#11 component was already initialized
+2026-09-16T23:06:33.642716+05:30 shallow gnome-keyring-daemon[3006]: discover_other_daemon: 1
+2026-09-16T23:06:35.096952+05:30 shallow polkitd[958]: Registered Authentication Agent for unix-session:c2 (system bus name :1.63 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-16T23:06:35.350926+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T23:06:35.351982+05:30 shallow pkexec[3471]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-16T23:06:41.291988+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-16T23:16:39.747887+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T23:16:39.754604+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T23:16:45.925236+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T23:17:01.933074+05:30 shallow CRON[6128]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T23:17:01.938942+05:30 shallow CRON[6128]: pam_unix(cron:session): session closed for user root
+2026-09-16T23:17:39.745221+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-16T23:17:39.746892+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-16T23:17:44.835135+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-16T23:19:20.910592+05:30 shallow gcr-prompter[6838]: Gcr: bus acquired: org.gnome.keyring.SystemPrompter
+2026-09-16T23:19:20.910889+05:30 shallow gcr-prompter[6838]: Gcr: registering prompter
+2026-09-16T23:19:20.910976+05:30 shallow gcr-prompter[6838]: Gcr: bus acquired: org.gnome.keyring.PrivatePrompter
+2026-09-16T23:19:20.911200+05:30 shallow gcr-prompter[6838]: Gcr: acquired name: org.gnome.keyring.SystemPrompter
+2026-09-16T23:19:20.911296+05:30 shallow gcr-prompter[6838]: Gcr: received BeginPrompting call from callback /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:20.911387+05:30 shallow gcr-prompter[6838]: Gcr: preparing a prompt for callback /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:20.911462+05:30 shallow gcr-prompter[6838]: Gcr: creating new GcrPromptDialog prompt
+2026-09-16T23:19:20.977422+05:30 shallow gcr-prompter[6838]: Gcr: automatically selecting secret exchange protocol
+2026-09-16T23:19:20.977591+05:30 shallow gcr-prompter[6838]: Gcr: generating public key
+2026-09-16T23:19:20.984169+05:30 shallow gcr-prompter[6838]: Gcr: beginning the secret exchange: [sx-aes-1]\npublic=OMeWhWPTPSMcNUG1VqilQSOz6ZxYcA3SjBpb0WCai5YHgnBCW3+3liWwqymb8he8oeqL0sD8DHrLBJGqPSk9pvxc8sl2UVpkh5cn7AhM5Jiy0tNFXV6gB3v00fQ67vOY4jaOn871IGWnw/ebyeISpsbTeG2fqGoNLrPpatWGXX9nx+uhWV2pGSZ8i8L4aIbQAMZN69ILX9mjySeXbBbQ4EkcixmKsGZkTe+6wRzUC1B0u45GqDxzJFZbegVE7P5i\n
+2026-09-16T23:19:20.984288+05:30 shallow gcr-prompter[6838]: Gcr: calling the PromptReady method on /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:20.984349+05:30 shallow gcr-prompter[6838]: Gcr: acquired name: org.gnome.keyring.PrivatePrompter
+2026-09-16T23:19:20.985550+05:30 shallow gcr-prompter[6838]: Gcr: returned from the PromptReady method on /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:20.999857+05:30 shallow gcr-prompter[6838]: Gcr: received PerformPrompt call from callback /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:21.000471+05:30 shallow gcr-prompter[6838]: Gcr: receiving secret exchange: [sx-aes-1]\npublic=MI0Nwm8pkGzB/09Mr0fljv5Em2TPfIbcidKWybsvdBThd5N/+E+lctBs11C/qPIzFIEZi4jlJMQfBYxqhUNpbI8tb/koYhU9JBfgtM1csRlVG1uHTH8J5dE+qAsjKXchtDsQKQmJqsVxJFaQxNQ7CNN8oCDIwIe9UUHU52i3maVSTgjXNtFqdtFxV3n87UjV+26bxz8ywfuBWMWu76kYE87QNshFSTiv90/ZIe8mfOGU3Zl98BKX+RmGHO9N2SWD\n
+2026-09-16T23:19:21.000576+05:30 shallow gcr-prompter[6838]: Gcr: deriving shared transport key
+2026-09-16T23:19:21.000643+05:30 shallow gcr-prompter[6838]: Gcr: deriving transport key
+2026-09-16T23:19:21.008033+05:30 shallow gcr-prompter[6838]: Gcr: starting password prompt for callback /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.915308+05:30 shallow gcr-prompter[6838]: Gcr: completed password prompt for callback :1.4@/org/gnome/keyring/Prompt/p2
+2026-09-16T23:19:31.915539+05:30 shallow gcr-prompter[6838]: Gcr: encrypting data
+2026-09-16T23:19:31.915614+05:30 shallow gcr-prompter[6838]: Gcr: sending the secret exchange: [sx-aes-1]\npublic=OMeWhWPTPSMcNUG1VqilQSOz6ZxYcA3SjBpb0WCai5YHgnBCW3+3liWwqymb8he8oeqL0sD8DHrLBJGqPSk9pvxc8sl2UVpkh5cn7AhM5Jiy0tNFXV6gB3v00fQ67vOY4jaOn871IGWnw/ebyeISpsbTeG2fqGoNLrPpatWGXX9nx+uhWV2pGSZ8i8L4aIbQAMZN69ILX9mjySeXbBbQ4EkcixmKsGZkTe+6wRzUC1B0u45GqDxzJFZbegVE7P5i\nsecret=mFKIB+5YGgaj2n6fwu6xzg==\niv=J6bInqbg5vFKPFBT83vBAw==\n
+2026-09-16T23:19:31.915673+05:30 shallow gcr-prompter[6838]: Gcr: calling the PromptReady method on /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928178+05:30 shallow gcr-prompter[6838]: Gcr: returned from the PromptReady method on /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928288+05:30 shallow gcr-prompter[6838]: Gcr: received PerformPrompt call from callback /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928347+05:30 shallow gcr-prompter[6838]: Gcr: stopping prompting for operation /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928420+05:30 shallow gcr-prompter[6838]: Gcr: closing the prompt
+2026-09-16T23:19:31.928482+05:30 shallow gcr-prompter[6838]: Gcr: stopping prompting for operation /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928533+05:30 shallow gcr-prompter[6838]: Gcr: couldn't find the callback for prompting operation /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928596+05:30 shallow gcr-prompter[6838]: Gcr: stopping prompting for operation /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928645+05:30 shallow gcr-prompter[6838]: Gcr: couldn't find the callback for prompting operation /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928695+05:30 shallow gcr-prompter[6838]: Gcr: stopping prompting for operation /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.928750+05:30 shallow gcr-prompter[6838]: Gcr: couldn't find the callback for prompting operation /org/gnome/keyring/Prompt/p2@:1.4
+2026-09-16T23:19:31.930185+05:30 shallow gcr-prompter[6838]: Gcr: calling the PromptDone method on /org/gnome/keyring/Prompt/p2@:1.4, and ignoring reply
+2026-09-16T23:19:42.417931+05:30 shallow gcr-prompter[6838]: Gcr: 10 second inactivity timeout, quitting
+2026-09-16T23:19:42.418199+05:30 shallow gcr-prompter[6838]: Gcr: unregistering prompter
+2026-09-16T23:19:42.419742+05:30 shallow gcr-prompter[6838]: Gcr: disposing prompter
+2026-09-16T23:19:42.419854+05:30 shallow gcr-prompter[6838]: Gcr: finalizing prompter
+2026-09-16T23:30:01.953033+05:30 shallow CRON[7259]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-16T23:30:01.956441+05:30 shallow CRON[7259]: pam_unix(cron:session): session closed for user root
+2026-09-17T00:17:01.982294+05:30 shallow CRON[9107]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T00:17:01.987552+05:30 shallow CRON[9107]: pam_unix(cron:session): session closed for user root
+2026-09-17T00:57:22.373830+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-17T00:57:22.375580+05:30 shallow systemd-logind[993]: Session c2 logged out. Waiting for processes to exit.
+2026-09-17T00:57:22.404566+05:30 shallow polkitd[958]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.63, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-17T00:57:26.017486+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-17T00:57:26.034259+05:30 shallow systemd-logind[993]: New session c3 of user lightdm.
+2026-09-17T00:57:26.046560+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-17T00:57:26.166127+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-17T00:57:26.557289+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user ""
+2026-09-17T00:57:33.532531+05:30 shallow systemd-logind[993]: The system will power off now!
+2026-09-17T00:57:33.541860+05:30 shallow systemd-logind[993]: System is powering down.
+2026-09-17T00:57:33.553626+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+2026-09-17T00:57:33.572637+05:30 shallow systemd-logind[993]: Removed session c2.
+2026-09-17T06:04:38.674660+05:30 shallow systemd-logind[957]: New seat seat0.
+2026-09-17T06:04:38.674663+05:30 shallow systemd-logind[957]: Watching system buttons on /dev/input/event9 (CASUE USB KB System Control)
+2026-09-17T06:04:38.674675+05:30 shallow systemd-logind[957]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-09-17T06:04:38.674679+05:30 shallow systemd-logind[957]: Watching system buttons on /dev/input/event1 (Lid Switch)
+2026-09-17T06:04:40.077810+05:30 shallow sshd[1910]: Server listening on 0.0.0.0 port 22.
+2026-09-17T06:04:40.077898+05:30 shallow sshd[1910]: Server listening on :: port 22.
+2026-09-17T06:04:45.791458+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-17T06:04:45.812329+05:30 shallow systemd-logind[957]: New session c1 of user lightdm.
+2026-09-17T06:04:45.837707+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-17T06:04:46.148357+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-17T06:04:52.962131+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-17T06:04:56.835894+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-17T06:04:56.836002+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-17T06:04:56.884964+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session closed for user lightdm
+2026-09-17T06:04:56.888779+05:30 shallow systemd-logind[957]: Removed session c1.
+2026-09-17T06:04:56.891225+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-17T06:04:56.899298+05:30 shallow systemd-logind[957]: New session c2 of user deep.
+2026-09-17T06:04:56.931776+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-17T06:04:57.154865+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-17T06:04:58.735129+05:30 shallow gnome-keyring-daemon[2426]: The Secret Service was already initialized
+2026-09-17T06:04:58.735337+05:30 shallow gnome-keyring-daemon[2426]: The PKCS#11 component was already initialized
+2026-09-17T06:04:58.735785+05:30 shallow gnome-keyring-daemon[2893]: discover_other_daemon: 1
+2026-09-17T06:04:59.759371+05:30 shallow polkitd[940]: Registered Authentication Agent for unix-session:c2 (system bus name :1.61 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-17T06:04:59.917493+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-17T06:04:59.918222+05:30 shallow pkexec[3164]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-17T06:05:06.984359+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-17T11:44:47.596789+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-17T11:44:47.597200+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-17T11:45:11.544791+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-17T11:45:47.585126+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-17T11:45:47.585302+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-17T11:45:52.600957+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-17T12:17:01.827073+05:30 shallow CRON[7986]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T12:17:01.829857+05:30 shallow CRON[7986]: pam_unix(cron:session): session closed for user root
+2026-09-17T12:21:42.249456+05:30 shallow systemd-logind[957]: The system will power off now!
+2026-09-17T12:21:42.252204+05:30 shallow systemd-logind[957]: System is powering down.
+2026-09-17T12:21:42.273004+05:30 shallow lightdm: pam_unix(lightdm:session): session closed for user deep
+2026-09-17T12:21:42.277327+05:30 shallow polkitd[940]: Unregistered Authentication Agent for unix-session:c2 (system bus name :1.61, object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN) (disconnected from bus)
+2026-09-17T12:21:42.309137+05:30 shallow systemd-logind[957]: Session c2 logged out. Waiting for processes to exit.
+2026-09-17T12:21:44.257228+05:30 shallow systemd-logind[971]: New seat seat0.
+2026-09-17T12:21:44.267084+05:30 shallow polkitd[950]: Loading rules from directory /etc/polkit-1/rules.d
+2026-09-17T12:21:44.267190+05:30 shallow polkitd[950]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-09-17T12:21:44.271788+05:30 shallow polkitd[950]: Finished loading, compiling and executing 14 rules
+2026-09-17T12:21:44.272444+05:30 shallow polkitd[950]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-09-17T12:21:45.583294+05:30 shallow sshd[1897]: Server listening on 0.0.0.0 port 22.
+2026-09-17T12:21:45.583375+05:30 shallow sshd[1897]: Server listening on :: port 22.
+2026-09-17T12:21:51.552574+05:30 shallow lightdm: pam_unix(lightdm-greeter:session): session opened for user lightdm(uid=113) by (uid=0)
+2026-09-17T12:21:51.573412+05:30 shallow systemd-logind[971]: New session c1 of user lightdm.
+2026-09-17T12:21:51.595137+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user lightdm(uid=113) by lightdm(uid=0)
+2026-09-17T12:21:51.846247+05:30 shallow lightdm: gkr-pam: couldn't unlock the login keyring.
+2026-09-17T12:22:04.960501+05:30 shallow lightdm: pam_succeed_if(lightdm:auth): requirement "user ingroup nopasswdlogin" not met by user "deep"
+2026-09-17T12:22:09.005959+05:30 shallow lightdm: gkr-pam: unable to locate daemon control file
+2026-09-17T12:22:09.006084+05:30 shallow lightdm: gkr-pam: stashed password to try later in open session
+2026-09-17T12:22:09.073382+05:30 shallow systemd-logind[971]: Removed session c1.
+2026-09-17T12:22:09.075736+05:30 shallow lightdm: pam_unix(lightdm:session): session opened for user deep(uid=1000) by (uid=0)
+2026-09-17T12:22:09.090064+05:30 shallow systemd-logind[971]: New session c2 of user deep.
+2026-09-17T12:22:09.109809+05:30 shallow (systemd): pam_unix(systemd-user:session): session opened for user deep(uid=1000) by deep(uid=0)
+2026-09-17T12:22:09.391571+05:30 shallow lightdm: gkr-pam: unlocked login keyring
+2026-09-17T12:22:11.092465+05:30 shallow gnome-keyring-daemon[2727]: The Secret Service was already initialized
+2026-09-17T12:22:11.092703+05:30 shallow gnome-keyring-daemon[2727]: The PKCS#11 component was already initialized
+2026-09-17T12:22:11.093156+05:30 shallow gnome-keyring-daemon[3015]: discover_other_daemon: 1
+2026-09-17T12:22:12.146530+05:30 shallow polkitd[950]: Registered Authentication Agent for unix-session:c2 (system bus name :1.60 [/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1], object path /org/gnome/PolicyKit1/AuthenticationAgent, locale en_IN)
+2026-09-17T12:22:12.265411+05:30 shallow pkexec: pam_unix(polkit-1:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-17T12:22:12.266040+05:30 shallow pkexec[3279]: deep: Executing command [USER=root] [TTY=unknown] [CWD=/home/deep] [COMMAND=/usr/sbin/xfpm-power-backlight-helper --set-brightness-switch 0]
+2026-09-17T13:13:50.863787+05:30 shallow (sd-pam): pam_unix(systemd-user:session): session closed for user lightdm
+2026-09-17T13:14:33.004270+05:30 shallow CRON[5061]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T13:14:33.005938+05:30 shallow CRON[5061]: pam_unix(cron:session): session closed for user root
+2026-09-17T13:17:01.011110+05:30 shallow CRON[5244]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T13:17:01.021727+05:30 shallow CRON[5244]: pam_unix(cron:session): session closed for user root
+2026-09-17T13:19:24.494771+05:30 shallow gnome-keyring-daemon[2727]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
+2026-09-17T13:23:45.408533+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-17T13:23:45.416180+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-17T13:23:47.635808+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-17T13:24:43.074965+05:30 shallow gcr-prompter[10943]: Gcr: bus acquired: org.gnome.keyring.SystemPrompter
+2026-09-17T13:24:43.075090+05:30 shallow gcr-prompter[10943]: Gcr: registering prompter
+2026-09-17T13:24:43.075120+05:30 shallow gcr-prompter[10943]: Gcr: bus acquired: org.gnome.keyring.PrivatePrompter
+2026-09-17T13:24:43.075166+05:30 shallow gcr-prompter[10943]: Gcr: acquired name: org.gnome.keyring.SystemPrompter
+2026-09-17T13:24:43.075184+05:30 shallow gcr-prompter[10943]: Gcr: received BeginPrompting call from callback /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:43.075206+05:30 shallow gcr-prompter[10943]: Gcr: preparing a prompt for callback /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:43.075227+05:30 shallow gcr-prompter[10943]: Gcr: creating new GcrPromptDialog prompt
+2026-09-17T13:24:43.098621+05:30 shallow gcr-prompter[10943]: Gcr: automatically selecting secret exchange protocol
+2026-09-17T13:24:43.098695+05:30 shallow gcr-prompter[10943]: Gcr: generating public key
+2026-09-17T13:24:43.100927+05:30 shallow gcr-prompter[10943]: Gcr: beginning the secret exchange: [sx-aes-1]\npublic=ZskzXo38H4sCUOEQ948Uk99T8S4WYKXYDRzbmd6/HgGUFxpeRw+zY9nonB044122hP2OswthtUDd4rN+7wOiyVCEli7lYHfk3g87bdoA/j6FgZlTizYSJwuhsGzzDupSaqWUv7KlyFBoVqSuamLdasXcuAsXCassqjrLbInJZBSkm5ZM+nUcnyZ5zfpXdW8CuRxPzoR7yrgOQ056DC0agYM5HZQiSB9gbhhFPlFnGCdEDeli0WHSdKOl7C8uStmZ\n
+2026-09-17T13:24:43.100996+05:30 shallow gcr-prompter[10943]: Gcr: calling the PromptReady method on /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:43.101048+05:30 shallow gcr-prompter[10943]: Gcr: acquired name: org.gnome.keyring.PrivatePrompter
+2026-09-17T13:24:43.101403+05:30 shallow gcr-prompter[10943]: Gcr: returned from the PromptReady method on /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:43.106451+05:30 shallow gcr-prompter[10943]: Gcr: received PerformPrompt call from callback /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:43.106867+05:30 shallow gcr-prompter[10943]: Gcr: receiving secret exchange: [sx-aes-1]\npublic=M2XTWFrnIqGrGLjhM4M33EMuHwYPgXtSJQlLld3MdaDBd9DXUOPMc3DmWIO3MGtbBNtXnZKsbPyt2fjtzR/I8mnZB7Q5F2tBOg7MSVPVUO8yn1ZLbNU0GNosss58jII8vquIHRIFPXJPnYtqYRrKupXT3txLjWkYPk3HjF69d7Z3xPdLo9Hav4PppV9DM+rA+A5d6v3f7/Ho09iJAABKwCvPgnP5h1Pqkj23sl6VQBoPcYQ57vve5czsYw7IPEdC\n
+2026-09-17T13:24:43.106911+05:30 shallow gcr-prompter[10943]: Gcr: deriving shared transport key
+2026-09-17T13:24:43.106967+05:30 shallow gcr-prompter[10943]: Gcr: deriving transport key
+2026-09-17T13:24:43.109540+05:30 shallow gcr-prompter[10943]: Gcr: starting password prompt for callback /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.055724+05:30 shallow gcr-prompter[10943]: Gcr: completed password prompt for callback :1.4@/org/gnome/keyring/Prompt/p4
+2026-09-17T13:24:52.056217+05:30 shallow gcr-prompter[10943]: Gcr: encrypting data
+2026-09-17T13:24:52.056266+05:30 shallow gcr-prompter[10943]: Gcr: sending the secret exchange: [sx-aes-1]\npublic=ZskzXo38H4sCUOEQ948Uk99T8S4WYKXYDRzbmd6/HgGUFxpeRw+zY9nonB044122hP2OswthtUDd4rN+7wOiyVCEli7lYHfk3g87bdoA/j6FgZlTizYSJwuhsGzzDupSaqWUv7KlyFBoVqSuamLdasXcuAsXCassqjrLbInJZBSkm5ZM+nUcnyZ5zfpXdW8CuRxPzoR7yrgOQ056DC0agYM5HZQiSB9gbhhFPlFnGCdEDeli0WHSdKOl7C8uStmZ\nsecret=RAWkfjsRHePYdJxbB2z4pA==\niv=A9tWNk1e5c4lwlBhxvDRuA==\n
+2026-09-17T13:24:52.056288+05:30 shallow gcr-prompter[10943]: Gcr: calling the PromptReady method on /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060041+05:30 shallow gcr-prompter[10943]: Gcr: returned from the PromptReady method on /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060084+05:30 shallow gcr-prompter[10943]: Gcr: received PerformPrompt call from callback /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060118+05:30 shallow gcr-prompter[10943]: Gcr: stopping prompting for operation /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060206+05:30 shallow gcr-prompter[10943]: Gcr: closing the prompt
+2026-09-17T13:24:52.060247+05:30 shallow gcr-prompter[10943]: Gcr: stopping prompting for operation /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060276+05:30 shallow gcr-prompter[10943]: Gcr: couldn't find the callback for prompting operation /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060325+05:30 shallow gcr-prompter[10943]: Gcr: stopping prompting for operation /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060367+05:30 shallow gcr-prompter[10943]: Gcr: couldn't find the callback for prompting operation /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060397+05:30 shallow gcr-prompter[10943]: Gcr: stopping prompting for operation /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060427+05:30 shallow gcr-prompter[10943]: Gcr: couldn't find the callback for prompting operation /org/gnome/keyring/Prompt/p4@:1.4
+2026-09-17T13:24:52.060899+05:30 shallow gcr-prompter[10943]: Gcr: calling the PromptDone method on /org/gnome/keyring/Prompt/p4@:1.4, and ignoring reply
+2026-09-17T13:25:02.659494+05:30 shallow gcr-prompter[10943]: Gcr: 10 second inactivity timeout, quitting
+2026-09-17T13:25:02.659637+05:30 shallow gcr-prompter[10943]: Gcr: unregistering prompter
+2026-09-17T13:25:02.660498+05:30 shallow gcr-prompter[10943]: Gcr: disposing prompter
+2026-09-17T13:25:02.660533+05:30 shallow gcr-prompter[10943]: Gcr: finalizing prompter
+2026-09-17T13:30:01.032121+05:30 shallow CRON[13297]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T13:30:01.035464+05:30 shallow CRON[13297]: pam_unix(cron:session): session closed for user root
+2026-09-17T13:45:47.407465+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-17T13:45:47.417144+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-17T13:45:50.885324+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-17T14:17:01.052664+05:30 shallow CRON[31154]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T14:17:01.055612+05:30 shallow CRON[31154]: pam_unix(cron:session): session closed for user root
+2026-09-17T14:30:01.066436+05:30 shallow CRON[35852]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T14:30:01.070496+05:30 shallow CRON[35852]: pam_unix(cron:session): session closed for user root
+2026-09-17T15:17:01.090090+05:30 shallow CRON[53005]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T15:17:01.096230+05:30 shallow CRON[53005]: pam_unix(cron:session): session closed for user root
+2026-09-17T15:23:45.405721+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-17T15:23:45.406492+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-17T15:23:47.088257+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-17T15:30:01.107781+05:30 shallow CRON[58447]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T15:30:01.111686+05:30 shallow CRON[58447]: pam_unix(cron:session): session closed for user root
+2026-09-17T15:45:47.407791+05:30 shallow sudo:     deep : PWD=/home/deep ; USER=root ; COMMAND=/usr/bin/mint-refresh-cache
+2026-09-17T15:45:47.418172+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
+2026-09-17T15:45:49.087056+05:30 shallow sudo: pam_unix(sudo:session): session closed for user root
+2026-09-17T16:17:01.135221+05:30 shallow CRON[76745]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T16:17:01.140483+05:30 shallow CRON[76745]: pam_unix(cron:session): session closed for user root
+2026-09-17T16:30:01.152698+05:30 shallow CRON[81495]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-09-17T16:30:01.156465+05:30 shallow CRON[81495]: pam_unix(cron:session): session closed for user root
+2026-09-17T16:44:38.625827+05:30 shallow sudo:     deep : TTY=pts/0 ; PWD=/home/deep/projects/ss ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log logs/auth_test.log
+2026-09-17T16:44:38.626664+05:30 shallow sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1000)
