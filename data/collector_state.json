@@ -1,3 +1,6 @@
 {
-    "logs/sample_auth.log": 488
+    "logs/sample_auth.log": {
+        "position": 500,
+        "inode": 1442468
+    }
 }
