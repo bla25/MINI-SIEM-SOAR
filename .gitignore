@@ -1,0 +1,10 @@
+_pycache_/
+*.pyc
+data/*.jsonl
+data/collector_state.json
+
+logs/*.log
+logs/*.log.*
+
+.env
+

@@ -1,6 +1,4 @@
-Sep 21 19:15:00 ubuntu sshd[5002]: Failed password for admin from 192.168.1.71 port 22 ssh2
-Sep 21 19:20:00 ubuntu sshd[5003]: Failed password for testuser from 192.168.1.50 port 22 ssh2
-Sep 21 19:20:00 ubuntu sshd[5003]: Failed password for testuser from 192.168.1.50 port 22 ssh2
-Sep 21 20:00:00 ubuntu sshd[8001]: Failed password for admin from 192.168.1.50 port 22 ssh2
-Sep 21 20:05:00 ubuntu sshd[8002]: Accepted password for user1 from 192.168.1.60 port 22 ssh2
-This is random invalid log data
+Sep 21 20:10:00 ubuntu sshd[9001]: Failed password for admin from 192.168.1.100 port 22 ssh2
+Sep 21 20:11:00 ubuntu sshd[9002]: Accepted password for user1 from 192.168.1.101 port 22 ssh2
+Sep 21 20:12:00 ubuntu sshd[9003]: Failed password for root from 10.0.0.15 port 22 ssh2
+Sep 21 20:15:00 ubuntu sshd[9004]: Failed password for testuser from 172.16.0.20 port 22 ssh2
