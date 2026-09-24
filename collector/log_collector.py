@@ -1,10 +1,15 @@
+import sys
 from pathlib import Path
+sys.path.insert(
+        0,
+        str(Path(__file__).resolve().parent.parent)
+    )
 from datetime import datetime
 import json
 import logging
 import time
 import signal
-import sys
+from parser.parser_manager import parse_log
 
 logging.basicConfig(
     level=logging.INFO,
@@ -161,21 +166,18 @@ class LogCollector:
 
     def process_log(self, raw_log):
 
-        event = {
+        try:
+            event = parse_log(
+                    raw_log,
+                    source=str(self.log_file)
+            )
 
-            "event_id": None,
+            self.save_event(event)
 
-            "collected_at":
-               datetime.now().isoformat(),
-
-            "source":
-                str(self.log_file),
-
-            "raw_log":
-                raw_log
-        }
-
-        self.save_event(event)
+        except Exception as error:
+            logging.error(
+                    f"Unable to process log:{error}"
+            )
     
     def save_event(self, event):
 
