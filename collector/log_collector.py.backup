@@ -10,7 +10,6 @@ import logging
 import time
 import signal
 from parser.parser_manager import parse_log
-from detection.detector import DetectionEngine
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,8 +25,6 @@ class LogCollector:
         self.state_file = Path(state_file)
 
         self.running  = True
-
-        self.detection_engine = DetectionEngine()
 
         signal.signal(signal.SIGINT, self.handle_shutdown)
         signal.signal(signal.SIGTERM, self.handle_shutdown)
@@ -176,15 +173,6 @@ class LogCollector:
             )
 
             self.save_event(event)
-
-            alerts = self.detection_engine.process_event(
-                event
-            )
-
-            for alert in alerts:
-                logging.warning(
-                    f"SECURTIY ALERT: {alert}"
-                )
 
         except Exception as error:
             logging.error(
