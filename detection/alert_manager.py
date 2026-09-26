@@ -45,3 +45,64 @@ class AlertManager:
             file.write(
                 json.dumps(alert) + "\n"
             )
+
+    def load_alerts(self):
+        """
+        Load all persisted alerts.
+        """
+
+        if not self.alert_file.exists():
+            return[]
+
+        alert = []
+
+        with self.alert_file.open("r") as file:
+            for line in file:
+                line = line.strip()
+
+                if not line:
+                    continue
+
+                try:
+                    alerts.append(
+                        json.loads(line)
+                    )
+                except json.jsonDecodeError:
+                    continue
+        return alerts
+    def update_alert_status(
+        self,
+        alert_id,
+        status
+    ):
+        valid_statuses = {
+            "open",
+            "acknowledged",
+            "resolved"
+        }
+
+        if status not in valid_statuses:
+            raise ValueError(
+                f"Invalid alert status: {status}"
+            )
+
+        alerts = self.load_alerts()
+
+        updated = False
+
+        for alert in alerts:
+            if alert.get("alert_id") == alert_id:
+
+                alert["status"] = status
+                alert["updated_at"] = (
+                    datetime.now().isoformat()
+                )
+
+                updated = True
+
+                break
+        if not updated:
+            return False
+
+        with self.alert_file_open("w") as 
+

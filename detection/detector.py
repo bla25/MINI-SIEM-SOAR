@@ -1,4 +1,4 @@
-from detection.rules import SSHBruteForceRule
+from detection.rules import (SSHBruteForceRule, SSHUsernameEnumerationRule)
 from detection.alert_manager import AlertManager
 
 class DetectionEngine:
@@ -10,6 +10,11 @@ class DetectionEngine:
     def __init__(self, alert_manager=None):
         self.rules = [
                 SSHBruteForceRule(
+                    threshold=5,
+                    window_seconds=60
+                ),
+
+                SSHUsernameEnumerationRule(
                     threshold=5,
                     window_seconds=60
                 )

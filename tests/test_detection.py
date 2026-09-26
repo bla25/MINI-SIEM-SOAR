@@ -1,6 +1,6 @@
 import unittest
 
-from detection.rules import SSHBruteForceRule
+from detection.rules import (SSHBruteForceRule, SSHUsernameEnumerationRule)
 from detection.detector import DetectionEngine
 
 class TestSSHBruteForceRule(unittest.TestCase):
@@ -134,7 +134,7 @@ class TestDetectionEngine(unittest.TestCase):
                     "source_ip":
                          "10.0.0.50"
                  }
-            }
+        }
 
             alerts = engine.process_event(event)
 
@@ -163,6 +163,141 @@ class TestDetectionEngine(unittest.TestCase):
             "ssh_brute_force"
         )
 
+class TestSSHUsernameEnumerationRule(unittest.TestCase):
+
+    def create_event(
+        self,
+        timestamp,
+        username,
+        source_ip="192.168.1.50"
+    ):
+        return {
+            "event_id": "test-event",
+            "timestamp": timestamp,
+            "event_type": "authentication_failure",
+            "severity": "medium",
+            "source": {
+                "type": "linux",
+                "log_file": "logs/sample_auth.log"
+            },
+            "user": {
+                "username": username
+            },
+            "network": {
+                "source_ip": source_ip,
+                "source_port": 22
+            },
+            "process": {
+                "name": "sshd",
+                "pid": 1234
+            },
+            "message": "Failed password",
+            "raw_log": "Failed password"
+        }
+
+    def test_no_alert_before_threshold(self):
+
+        rule = SSHUsernameEnumerationRule(
+            threshold=5,
+            window_seconds=60
+        )
+
+        usernames = [
+            "root",
+            "admin",
+            "test",
+            "ubuntu"
+        ]
+
+        for second, username in enumerate(usernames):
+
+            event = self.create_event(
+                f"2026-09-26T12:00:{second:02d}",
+                username
+            )
+
+            alert = rule.evaluate(event)
+
+            self.assertIsNone(alert)
+
+    def test_alert_for_multiple_usernames(self):
+
+        rule = SSHUsernameEnumerationRule(
+            threshold=5,
+            window_seconds=60
+        )
+
+        usernames = [
+            "root",
+            "admin",
+            "test",
+            "ubuntu",
+            "guest"
+        ]
+
+        alert = None
+
+        for second, username in enumerate(usernames):
+
+            event = self.create_event(
+                f"2026-09-26T12:00:{second:02d}",
+                username
+            )
+
+            alert = rule.evaluate(event)
+
+        self.assertIsNotNone(alert)
+
+        self.assertEqual(
+            alert["alert_type"],
+            "ssh_username_enumeration"
+        )
+
+        self.assertEqual(
+            alert["severity"],
+            "high"
+        )
+
+        self.assertEqual(
+            alert["source_ip"],
+            "192.168.1.50"
+        )
+
+        self.assertEqual(
+            alert["unique_usernames"],
+            5
+        )
+
+    def test_repeated_username_does_not_count_as_new_user(self):
+
+        rule = SSHUsernameEnumerationRule(
+            threshold=5,
+            window_seconds=60
+        )
+
+        usernames = [
+            "root",
+            "root",
+            "root",
+            "admin",
+            "admin"
+        ]
+
+        for second, username in enumerate(usernames):
+
+            event = self.create_event(
+                f"2026-09-26T12:00:{second:02d}",
+                username
+            )
+
+            alert = rule.evaluate(event)
+
+        self.assertIsNone(alert)
+
+
+
+
+
+
 if __name__ == "__main__":
     unittest.main()
-    
