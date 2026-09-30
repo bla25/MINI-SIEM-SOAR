@@ -64,12 +64,12 @@ class AlertManager:
                     continue
 
                 try:
-                    alerts.append(
+                    alert.append(
                         json.loads(line)
                     )
-                except json.jsonDecodeError:
+                except json.JSONDecodeError:
                     continue
-        return alerts
+        return alert
     def update_alert_status(
         self,
         alert_id,
@@ -104,5 +104,27 @@ class AlertManager:
         if not updated:
             return False
 
-        with self.alert_file_open("w") as 
+        with self.alert_file.open("w") as file:
+
+            for alert in alerts:
+                 file.write(
+                    json.dumps(alert) + "\n"
+                      
+                 )
+
+        return True
+    
+    def acknowledge_alert(self, alert_id):
+        return self.update_alert_status(
+            alert_id,
+            "acknowledged"
+        )
+
+
+    def resolve_alert(self, alert_id):
+
+        return self.update_alert_status(
+            alert_id,
+            "resolved"
+        )
 

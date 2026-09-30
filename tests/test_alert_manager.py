@@ -97,6 +97,68 @@ class TestAlertManager(unittest.TestCase):
             "open"
         )
 
+    def test_acknowledge_alert(self):
+        detection = self.create_detection()
+
+        alert = self.manager.create_alert(
+            detection
+        )
+
+        result = self.manager.acknowledge_alert(
+            alert["alert_id"]
+        )
+
+        self.assertTrue(result)
+
+        alerts = self.manager.load_alerts()
+
+        self.assertEqual(
+            alerts[0]["status"],
+            "acknowledged"
+        )
+
+        self.assertIn(
+            "updated_at",
+            alerts[0]
+        )
+
+    def test_resolve_alert(self):
+        detection = self.create_detection()
+
+        alert = self.manager.create_alert(
+            detection
+        )
+
+        result = self.manager.resolve_alert(
+            alert["alert_id"]
+        )
+
+        self.assertTrue(result)
+
+        alerts = self.manager.load_alerts()
+
+        self.assertEqual(
+            alerts[0]["status"],
+            "resolved"
+        )
+
+    def test_invalid_alert_status(self):
+
+        detection = self.create_detection()
+
+        alert = self.manager.create_alert(
+             detection
+        )
+
+        with self.assertRaises(ValueError):
+
+            self.manager.update_alert_status(
+                alert["alert_id"],
+                "invalid"
+            )
+
+
+
 if __name__ == "__main__":
     unittest.main()
 
