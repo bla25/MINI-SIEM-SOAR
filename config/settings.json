@@ -1,0 +1,23 @@
+
+{
+    "detection": {
+        "ssh_brute_force": {
+            "enabled": true,
+            "threshold": 5,
+            "window_seconds": 60,
+            "cooldown_seconds": 60
+        },
+        "ssh_username_enumeration": {
+            "enabled": true,
+            "threshold": 5,
+            "window_seconds": 60,
+            "cooldown_seconds": 60
+        }
+    },
+    "response": {
+        "enabled": true,
+        "minimum_severity": "high",
+        "firewall_dry_run": true
+    }
+}
+

@@ -5,12 +5,14 @@ from datetime import datetime
 from pathlib import Path
 
 from response.blocklist import BlocklistManager
+from response.firewall import FirewallAdapter
 
 class ResponseEngine:
 
     def __init__(
         self,
         blocklist_manager=None,
+        firewall_adapter=None,
         action_file="data/response_actions.jsonl"
     ):
 
@@ -18,6 +20,14 @@ class ResponseEngine:
             blocklist_manager
             if blocklist_manager
             else BlocklistManager()
+        )
+
+        self.firewall_adapter = (
+            firewall_adapter
+            if firewall_adapter
+            else FirewallAdapter(
+                dry_run=True
+            )
         )
 
         self.action_file = Path(action_file)
@@ -39,10 +49,37 @@ class ResponseEngine:
         if severity != "high":
             return None
 
+        if self.blocklist_manager.is_allowlisted(
+            source_ip
+        ):
+            action = {
+                "action_id": str(uuid.uuid4()),
+                "timestamp": datetime.now().isoformat(),
+                "action": "block_ip",
+                "source_ip": source_ip,
+                "alert_id": alert.get("alert_id"),
+                "alert_type": alert.get("alert_type"),
+                "status": "allowlisted",
+                "reason": "Source IP is allowlisted"
+            }
+
+            self.save_action(action)
+
+            return action
+
         action_taken = self.blocklist_manager.block_ip(
             source_ip,
             alert.get("alert_type", "unknown")
         )
+
+        firewall_result = None
+
+        if action_taken:
+            firewall_result = (
+                self.firewall_adapter.block_ip(
+                    source_ip
+                )
+            )
 
         action = {
             "action_id": str(uuid.uuid4()),
@@ -55,7 +92,8 @@ class ResponseEngine:
                 "executed"
                 if action_taken
                 else "already_blocked"
-            )
+            ),
+           "firewall": firewall_result 
         }
 
         self.save_action(action)

@@ -1,48 +1,51 @@
-from detection.rules import (SSHBruteForceRule, SSHUsernameEnumerationRule)
+from config.config_loader import load_config
+from detection.rules import (
+    SSHBruteForceRule,
+    SSHUsernameEnumerationRule,
+)
 from detection.alert_manager import AlertManager
 
+
 class DetectionEngine:
-    """
-    Detection engine responsible for evaluating
-    normalized security events against detection rules.
-    """
+    def __init__(self, alert_manager=None, config=None):
+        self.config = config if config is not None else load_config()
 
-    def __init__(self, alert_manager=None):
-        self.rules = [
+        detection_config = self.config["detection"]
+        self.rules = []
+
+        brute_force = detection_config["ssh_brute_force"]
+        if brute_force["enabled"]:
+            self.rules.append(
                 SSHBruteForceRule(
-                    threshold=5,
-                    window_seconds=60
-                ),
-
-                SSHUsernameEnumerationRule(
-                    threshold=5,
-                    window_seconds=60
+                    threshold=brute_force["threshold"],
+                    window_seconds=brute_force["window_seconds"],
+                    cooldown_seconds=brute_force["cooldown_seconds"],
                 )
-        ]
+            )
+
+        enumeration = detection_config["ssh_username_enumeration"]
+        if enumeration["enabled"]:
+            self.rules.append(
+                SSHUsernameEnumerationRule(
+                    threshold=enumeration["threshold"],
+                    window_seconds=enumeration["window_seconds"],
+                    cooldown_seconds=enumeration["cooldown_seconds"],
+                )
+            )
 
         self.alert_manager = (
-            alert_manager
-            if alert_manager
+            alert_manager if alert_manager is not None
             else AlertManager()
         )
 
     def process_event(self, event):
-        """
-        Process an event through all detection rules.
-
-        Returns a list of general alerts.
-        """
-
         alerts = []
 
         for rule in self.rules:
             detection = rule.evaluate(event)
-
             if detection:
-                alert = self.alert_manager.create_alert(
-                    detection
-                )
-
+                alert = self.alert_manager.create_alert(detection)
                 alerts.append(alert)
 
         return alerts
+

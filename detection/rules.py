@@ -7,10 +7,10 @@ class SSHBruteForceRule:
     from the same source IP within a time window
     """
 
-    def __init__(self, threshold=5, window_seconds=60):
+    def __init__(self, threshold=5, window_seconds=60, cooldown_seconds=60):
         self.threshold = threshold
         self.window = timedelta(seconds=window_seconds)
-
+        self.cooldown = timedelta(seconds=cooldown_seconds)
         self.attempts = defaultdict(deque)
 
     def evaluate(self, event):

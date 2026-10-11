@@ -129,6 +129,64 @@ class TestResponseEngine(unittest.TestCase):
             action["source_ip"],
             "192.168.1.200"
         )
+
+    def test_allowlisted_ip_is_not_blocked(self):
+
+        allowlist_file = (
+            Path(self.temp_dir.name)
+            / "allowlist.json"
+        )
+
+        with allowlist_file.open("w") as file:
+            json.dump(
+                ["192.168.1.200"],
+                file
+            )
+
+        blocklist = BlocklistManager(
+            blocklist_file=self.blocklist_file,
+            allowlist_file=allowlist_file
+        )
+
+        engine = ResponseEngine(
+            blocklist_manager=blocklist,
+            action_file=self.action_file
+        )
+
+        alert = self.create_alert()
+
+        action = engine.respond(alert)
+
+        self.assertIsNotNone(action)
+
+        self.assertEqual(
+            action["status"],
+            "allowlisted"
+        )
+
+        self.assertFalse(
+            blocklist.is_blocked(
+                "192.168.1.200"
+            )
+        )
+
+    def test_non_allowlisted_ip_is_blocking(self):
+
+        alert = self.create_alert()
+
+        action = self.engine.respond(alert)
+
+        self.assertEqual(
+            action["status"],
+            "executed"
+        )
+
+        self.assertTrue(
+            self.blocklist.is_blocked(
+                "192.168.1.200"
+            )
+        )
+
 if __name__ == "__main__":
     unittest.main()
 
