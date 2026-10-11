@@ -5,6 +5,8 @@ from detection.rules import (
 )
 from detection.alert_manager import AlertManager
 
+from utils.logger import setup_logger
+logger = setup_logger()
 
 class DetectionEngine:
     def __init__(self, alert_manager=None, config=None):
@@ -46,6 +48,12 @@ class DetectionEngine:
             if detection:
                 alert = self.alert_manager.create_alert(detection)
                 alerts.append(alert)
+                logger.warning(
+                    "Detection triggered: type=%s severity=%s source_ip=%s",
+                    alert.get("alert_type"),
+                    alert.get("severity"),
+                    alert.get("source_ip"),
+                )
 
         return alerts
 

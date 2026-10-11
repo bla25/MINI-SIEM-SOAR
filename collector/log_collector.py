@@ -16,6 +16,8 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
+from utils.logger import setup_logger
+logger = setup_logger()
 
 
 class LogCollector:
@@ -35,6 +37,7 @@ class LogCollector:
     def handle_shutdown(self, signum, frame):
 
         logging.info("Shutdown signal recieved.")
+        logger.info("Log collector stopped.")
 
         self.running = False
 
@@ -43,6 +46,7 @@ class LogCollector:
         if not self.state_file.exists():
 
             logging.info("No previous state found. Starting from begining.")
+            logger.info("Log collector started.")
             return 0 
         
         try:
@@ -183,7 +187,7 @@ class LogCollector:
 
             for alert in alerts:
                 logging.warning(
-                    f"SECURTIY ALERT: {alert}"
+                    f"security alert generated: %s", {alert}
                 )
 
         except Exception as error:

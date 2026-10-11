@@ -1,0 +1,5 @@
+2026-10-11 17:43:16 | INFO | sslogs | Response recorded: action=block_ip status=allowlisted source_ip=192.168.1.200
+2026-10-11 17:44:05 | WARNING | sslogs | Detection triggered: type=ssh_brute_force severity=high source_ip=10.0.0.50
+2026-10-11 17:44:05 | WARNING | sslogs | Detection triggered: type=ssh_brute_force severity=high source_ip=10.20.30.40
+2026-10-11 17:44:05 | WARNING | sslogs | Detection triggered: type=ssh_brute_force severity=high source_ip=203.0.113.50
+2026-10-11 17:44:05 | INFO | sslogs | Response recorded: action=block_ip status=allowlisted source_ip=192.168.1.200

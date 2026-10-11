@@ -7,6 +7,9 @@ from pathlib import Path
 from response.blocklist import BlocklistManager
 from response.firewall import FirewallAdapter
 
+from utils.logger import setup_logger
+logger = setup_logger()
+
 class ResponseEngine:
 
     def __init__(
@@ -64,6 +67,13 @@ class ResponseEngine:
             }
 
             self.save_action(action)
+
+            logger.info(
+                "Response recorded: action=%s status=%s source_ip=%s",
+                action.get("action"),
+                action.get("status"),
+                action.get("source_ip"),
+            )
 
             return action
 
