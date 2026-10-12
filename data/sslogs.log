@@ -17,3 +17,8 @@
 2026-10-12 06:34:21 | WARNING | sslogs | Detection triggered: type=ssh_brute_force severity=high source_ip=192.168.1.200
 2026-10-12 06:48:31 | INFO | sslogs | Log collector stopped.
 2026-10-12 07:08:27 | INFO | sslogs | Log collector stopped.
+2026-10-12 10:26:58 | INFO | sslogs | Log collector stopped.
+2026-10-12 10:31:10 | INFO | sslogs | Log collector stopped.
+2026-10-12 10:39:13 | INFO | sslogs | Log collector stopped.
+2026-10-12 11:01:58 | INFO | sslogs | Log collector stopped.
+2026-10-12 11:06:10 | INFO | sslogs | Log collector stopped.

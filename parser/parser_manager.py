@@ -16,7 +16,7 @@ def parse_log(raw_log, source="unknown"):
             "log_file": source
         },
 
-        "message": raw_Log,
+        "message": raw_log,
         "raw_log": raw_log
     }
 

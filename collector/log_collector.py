@@ -18,12 +18,13 @@ logging.basicConfig(
 )
 from utils.logger import setup_logger
 logger = setup_logger()
-
-
+import os
 class LogCollector:
 
     def __init__(self, log_file, output_file, state_file):
-        self.log_file = Path(log_file)
+        self.log_file = Path(
+            os.getenv("SENTINELLITE_LOG_FILE", "logs/sample_auth.log")
+        )
         self.output_file = Path(output_file)
         self.state_file = Path(state_file)
 

@@ -1,4 +1,3 @@
-
 services:
   sentinellite:
     build:
@@ -9,8 +8,10 @@ services:
     restart: unless-stopped
     environment:
       SENTINELLITE_LOG_LEVEL: INFO
+      SENTINELLITE_LOG_FILE: /app/logs/host_auth.log
     volumes:
       - ./logs:/app/logs
       - ./data:/app/data
     stop_grace_period: 15s
+
 

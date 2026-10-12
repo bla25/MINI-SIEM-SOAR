@@ -2,7 +2,7 @@ import logging
 import os
 from pathlib import Path
 
-def setup_logger(name="sslogs", log_file="data/sslogs.log", level=None):
+def setup_logger(name="sslogs", log_file="/tmp/ss.log", level=None):
     logger = logging.getLogger(name)
 
     if logger.handlers:
