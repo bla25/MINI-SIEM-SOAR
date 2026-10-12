@@ -1,0 +1,12 @@
+.git
+.gitignore
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+tests/
+data/*.jsonl
+data/collector_state.json
+logs/*.log
+logs/*.log.*

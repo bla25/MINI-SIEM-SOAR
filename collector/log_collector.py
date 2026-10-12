@@ -190,10 +190,8 @@ class LogCollector:
                     f"security alert generated: %s", {alert}
                 )
 
-        except Exception as error:
-            logging.error(
-                    f"Unable to process log:{error}"
-            )
+        except Exception:
+            logging.exception("Unable to process log")
     
     def save_event(self, event):
 

@@ -1,0 +1,16 @@
+
+services:
+  sentinellite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentinellite
+    init: true
+    restart: unless-stopped
+    environment:
+      SENTINELLITE_LOG_LEVEL: INFO
+    volumes:
+      - ./logs:/app/logs
+      - ./data:/app/data
+    stop_grace_period: 15s
+
