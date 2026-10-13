@@ -1,6 +1,7 @@
 import logging
 import os
 from pathlib import Path
+from logging.handlers import RotatingFileHandler
 
 def setup_logger(name="sslogs", log_file="/tmp/ss.log", level=None):
     logger = logging.getLogger(name)
@@ -28,7 +29,12 @@ def setup_logger(name="sslogs", log_file="/tmp/ss.log", level=None):
     path = Path(log_file)
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    file_handler = logging.FileHandler(path, encoding="utf-8")
+    file_handler = RotatingFileHandler(
+        path,
+        maxBytes=5 * 1024 *1024,
+        backupCount=3,
+        encoding="utf-8",
+    )
     file_handler.setFormatter(formatter)
     logger.addHandler(file_handler)
 
