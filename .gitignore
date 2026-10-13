@@ -1,10 +1,11 @@
-_pycache_/
-*.pyc
+__pycache__/
+*.py[cod]
+.env
+.venv/
+venv/
+
 data/*.jsonl
 data/collector_state.json
-
 logs/*.log
 logs/*.log.*
-
-.env
 
